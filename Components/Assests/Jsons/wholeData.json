@@ -1,0 +1,72 @@
+{
+  "home": ["Motor Fuels", "Lubricants", "LPG", "Industrial Fuels"],
+  "acknoledgetment": ["Product Finder", "Knowledge Center"],
+  "industrial": ["Bitumen", "Bulk Fuels", "Solvents", "Industrial Liquids"],
+  "Knowledge": [
+    "Bitumen & Roads",
+    "Fire & Combustion",
+    "Lubricants & Maintenance",
+    "Safety & Heading"
+  ],
+  "Bitumen": ["VG-10", "VG-30", "VG-40"],
+  "MotorFuels": ["E20", "HSD", "ATF", "Ethanol", "Kerosene"],
+  "IndusLiquids": ["LSHS"],
+  "Solvents": ["LAN", "HEXANE", "1425", "MTO"],
+  "LPG": ["LPG"],
+  "BulkFuel": ["FO", "LDO", "HFHSD"],
+  "Comparison": [
+    "VG-10",
+    "VG-30",
+    "VG-40",
+    "E20",
+    "HSD",
+    "ATF",
+    "Ethanol",
+    "Kerosene",
+    "LSHS",
+    "LAN",
+    "HEXANE",
+    "1425",
+    "MTO",
+    "LPG",
+    "FO",
+    "LDO",
+    "HFHSD"
+  ],
+  "products": [
+    { "id": 1, "label": "Paving Bitumen (VG10)", "value": "VG-10" },
+    { "id": 2, "label": "Paving Bitumen (VG30)", "value": "VG-30" },
+    { "id": 3, "label": "Paving Bitumen (VG40)", "value": "VG-40" },
+    { "id": 4, "label": "E20 MS", "value": "E20" },
+    { "id": 5, "label": "High Speed Diesel (HSD)", "value": "HSD" },
+    { "id": 6, "label": "Aviation Turbine Fuel", "value": "ATF" },
+    { "id": 7, "label": "Ethanol", "value": "Ethanol" },
+    { "id": 8, "label": "Kerosene", "value": "Kerosene" },
+    { "id": 9, "label": "Low Sulphur Heavy Stock", "value": "LSHS" },
+    { "id": 10, "label": "Low Aromatic Naphtha", "value": "LAN" },
+    { "id": 11, "label": "FOOD GRADE HEXANE", "value": "HEXANE" },
+    { "id": 12, "label": "Solvent 1425", "value": "1425" },
+    { "id": 13, "label": "Mineral Turpentine Oil", "value": "MTO" },
+    { "id": 14, "label": "Liquefied Petroleum Gas", "value": "LPG" },
+    { "id": 15, "label": "FO (MV2 Grade)", "value": "FO" },
+    { "id": 16, "label": "Heating Oil (LDO)", "value": "LDO" },
+    {
+      "id": 17,
+      "label": "High Flash High Speed Diesel Distillate Marine Fuel",
+      "value": "HFHSD"
+    },
+    {
+      "id": 18,
+      "label": "Very Low Sulfur Fuel Oil",
+      "value": "VLSFO"
+    }
+  ],
+  "android": [
+    "cd android",
+    "./gradlew clean",
+    "./gradlew assembleRelease",
+    "android/app/build/outputs/apk/release/app-release.apk",
+    "./gradlew assembleDebug",
+    "android/app/build/outputs/apk/debug/app-debug.apk"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "company": "Hindustan Petroleum Corporation Ltd (HPCL)",
+  "products": [
+    {
+      "name": "Petrol",
+      "industry_name": "Motor Spirit (MS)",
+      "specifications": {
+        "emission_compliance": "BS-VI",
+        "ethanol_blend": "Up to 10% ethanol (E10)",
+        "typical_octane_ratings": [
+          { "variant": "Regular Petrol", "RON": 91 },
+          { "variant": "poWer95", "RON": 95 },
+          { "variant": "poWer99", "RON": 99 },
+          { "variant": "poWer100", "RON": 100 }
+        ]
+      }
+    },
+    {
+      "name": "Diesel",
+      "industry_name": "High-Speed Diesel (HSD)",
+      "specifications": {
+        "emission_compliance": "BS-VI",
+        "biodiesel_blend": "Up to B7",
+        "cetane_number": "Commercial Grade"
+      }
+    }
+  ]
+}

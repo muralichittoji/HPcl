@@ -1,0 +1,26 @@
+{
+  "category": "Customer Support",
+  "company": "Hindustan Petroleum Corporation Ltd (HPCL)",
+  "contacts": [
+    {
+      "type": "Toll-Free Number",
+      "value": "1800-233-5555",
+      "notes": "Available 24x7 for complaints and inquiries."
+    },
+    {
+      "type": "Email Support",
+      "value": "customersupport@hpcl.co.in",
+      "notes": "Response within 24 hours."
+    },
+    {
+      "type": "Regional Office",
+      "value": "HPCL Mumbai Office, Andheri East, Mumbai",
+      "notes": "For regional queries and office visits."
+    },
+    {
+      "type": "Feedback Form",
+      "value": "https://www.hpcl.co.in/contact-us",
+      "notes": "Submit online complaints or suggestions."
+    }
+  ]
+}

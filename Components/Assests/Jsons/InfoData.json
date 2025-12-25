@@ -1,0 +1,490 @@
+{
+  "VG-10": {
+    "title": "Paving Bitumen (VG10)",
+    "subTitle": "ROAD CONSTRUCTION MATERIAL",
+    "description": "Bitumen is obtained as the last residue in fractional distillation of crude petroleum. It is defined as a viscous liquid, or a solid, consisting essentially of complex mixture of hydrocarbons including high-molecular-weight compounds, such as asphaltenes, and lighter fractions, such as aromatics and saturates. It is substantially non-volatile and softens gradually when heated. It is black or brown in colour & possesses waterproofing and adhesive properties. ",
+    "specifications": [
+      { "property": "Product Name", "value": "Paving Bitumen VG10" },
+      { "property": "Penetration at 25°C, 100 g, 5 s", "value": "Min 80°C" },
+      { "property": "Softening Point", "value": "Min 40°C" },
+      { "property": "Flash Point", "value": "≥ 220°C" },
+      { "property": "Solubility in Trichloroethylene", "value": "Min 99.0%" }
+    ],
+    "appData": "Paving bitumen is extensively used in the construction of roads, highways and airport tarmac.",
+    "packaging": ["Bulk"],
+    "Related": ["-"]
+  },
+  "VG-30": {
+    "title": "Paving Bitumen (VG30)",
+    "subTitle": "ROAD CONSTRUCTION MATERIAL",
+    "description": "Bitumen is obtained as the last residue in fractional distillation of crude petroleum. It is defined as a viscous liquid, or a solid, consisting essentially of complex mixture of hydrocarbons including high-molecular-weight compounds, such as asphaltenes, and lighter fractions, such as aromatics and saturates. It is substantially non-volatile and softens gradually when heated. It is black or brown in colour & possesses waterproofing and adhesive properties.",
+    "specifications": [
+      { "property": "Product Name", "value": "Paving Bitumen VG30" },
+      { "property": "Penetration at 25°C, 100 g, 5 s", "value": "Min 45°C" },
+      { "property": "Softening Point", "value": "Min 47°C" },
+      { "property": "Flash Point", "value": "Min 220°C" },
+      { "property": "Solubility in Trichloroethylene", "value": "Min 99.0%" }
+    ],
+    "appData": "Paving bitumen is extensively used in the construction of roads, highways and airport tarmac.",
+    "packaging": ["Bulk"],
+    "Related": ["-"]
+  },
+  "VG-40": {
+    "title": "Paving Bitumen (VG40)",
+    "subTitle": "ROAD CONSTRUCTION MATERIAL",
+    "description": "Bitumen is obtained as the last residue in fractional distillation of crude petroleum. It is defined as a viscous liquid, or a solid, consisting essentially of complex mixture of hydrocarbons including high-molecular-weight compounds, such as asphaltenes, and lighter fractions, such as aromatics and saturates. It is substantially non-volatile and softens gradually when heated. It is black or brown in colour & possesses waterproofing and adhesive properties.",
+    "specifications": [
+      { "property": "Product Name", "value": "Paving Bitumen VG40" },
+      {
+        "property": "Penetration at 25°C, 100 g, 5 s",
+        "value": "0.1 mm, Min 35 "
+      },
+      { "property": "Flash Point", "value": "Min 50°C" },
+      { "property": "Solubility in trichloroethylene", "value": "Min 99.0%" }
+    ],
+    "appData": "Paving bitumen is extensively used in the construction of roads, highways and airport tarmac.",
+    "packaging": ["Bulk"],
+    "Related": ["-"]
+  },
+  "Lubricant": {
+    "title": "HP KISAN SHAKTI",
+    "subTitle": "Agriculture Oils",
+    "description": "HP KISAN SHAKTI is an engine oil developed for agricultural Pump-Sets running on Diesel, Kerosene or Light Diesel Oil (LDO). The product is made from paraffinic base stocks and fortified with select additives to deliver performance benefits in the pump-sets used in agriculture and farming activities. The superior additive chemistry not only ensures greater protection of the engine against wear and rust, its balanced detergency helps to keep the engine clean and trouble free for longer service intervals.",
+    "specifications": [
+      {
+        "property": "Product Name",
+        "value": "HP KISAN SHAKTI"
+      },
+      {
+        "property": "Kinematic Viscosity @ 100°C",
+        "value": "cSt 15"
+      },
+      {
+        "property": "Viscosity Index",
+        "value": "110"
+      },
+      { "property": "Pour Point", "value": "°C -21" }
+    ],
+    "appData": "HP KISAN SHAKTI is recommended for all types of agricultural and farm equipment like Pumpsets, Tractors, Powertillers, Harvesters & DG sets requiring good quality Diesel Engine Oils. \nHP KISAN SHAKTI can also be used in petrol engines to render satisfactory performance.",
+    "packaging": ["Barrel", "Bulk", "Carton"],
+    "Related": ["HP PUMPSET OIL"]
+  },
+  "E20": {
+    "title": "E20 MS",
+    "subTitle": "Motor Fuel",
+    "description": "Motor Spirit (also known as Motor Gasoline) is a distillate fraction, normally boiling within the range 30°C to 210°C. It is a complex mixture composed of relatively volatile hydrocarbons (alkanes, alkenes and aromatics with typical carbon chain length of C5 to C10) that vary widely in their physical and chemical properties. ",
+    "specifications": [
+      { "property": "Product Name", "value": "E20 MS" },
+      { "property": "Density at 15°C, kg/m³", "value": "720-775" },
+      {
+        "property": "Distillation % evaporated at 70°C (E 70°C)",
+        "value": "10-60"
+      },
+      { "property": "Ethanol content, percent", "value": "19-20" }
+    ],
+    "appData": "Primarily used in transportation (Cars, Sport Utility Vehicles, Motorcycles and Scooters). E20 Fuel was launched in India on 6th Feb 2023. As on date regular MS is substituted by E20 MS. It is observed that E20 fuel is being used in existing spark-ignition engine. E20 fuel has several advantages over conventional MS, such as it reduces vehicular tailpipe emissions by lowering the carbon monoxide, hydrocarbons and nitrogen oxides levels.",
+    "packaging": ["Bulk", "Retail"],
+    "Related": ["MS POWER 95"]
+  },
+  "HSD": {
+    "title": "High Speed Diesel",
+    "subTitle": "Motor Fuel",
+    "description": "High-Speed Diesel (HSD), also known as Automotive Diesel Fuel, is produced from the fractional distillation of crude oil between 200°C and 400°C resulting in a mixture of carbon chains and is composed of saturated hydrocarbons and aromatic hydrocarbons.",
+    "specifications": [
+      { "property": "Product Name", "value": "HSD (High Speed Diesel)" },
+      {
+        "property": "Total Acid Number (TAN), mg of KOH/g",
+        "value": "Max 0.20"
+      },
+      {
+        "property": "Distillation, 95 percent v/v, recovery, °C",
+        "value": "Max 360"
+      },
+      { "property": "FAME content, % v/v", "value": "Max 7.0" }
+    ],
+    "appData": "HSD is commonly used as a fuel in medium and high-speed compression ignition engine in commercial vehicle, stationery diesel engines, locomotive and pumps etc. It is also used as fuel in power generation (DG sets), agriculture and construction machinery",
+    "packaging": ["Bulk"],
+    "Related": ["HP TURBOJET"]
+  },
+  "Ethanol": {
+    "title": "Ethanol",
+    "subTitle": "FUEL ADDITIVE FOR MS",
+    "description": "Ethanol meant for E20 blending having purity of min. 99.5% and other components including water max. 0.5%. Anhydrous Ethanol is known as Ethyl Alcohol, is a clear, colourless and homogenous liquid with high purity, also known as Absolute Alcohol. Anhydrous Ethanol is categorized into 1G and 2G, based on its source of raw material used. 1G Ethanol produced from raw materials viz. sugarcane juice, molasses, damaged food grains. 2G Ethanol are generally made from biomass. 1G Ethanol is produced by subsidiary unit HPCL-Biofuel Ltd.",
+    "specifications": [
+      {
+        "property": "Product Name",
+        "value": "Ethanol"
+      },
+      {
+        "property": "Relative density at 15.6/15.6 °C",
+        "value": "Max 0.7961 (1G) / 0.7965 (2G/OGF)"
+      },
+      {
+        "property": "Ethanol, percent, v/v, Min. (excluding denaturant)",
+        "value": "99.5 (1G)/ 98 (2G/OGF)"
+      },
+      {
+        "property": "pHe",
+        "value": "6.5 – 8.0 (2G/OGF)"
+      }
+    ],
+    "appData": "Ethanol is an environment friendly fuel used for blending with Motor Spirit (MS).",
+    "packaging": ["Bulk"],
+    "Related": ["-"]
+  },
+  "Kerosene": {
+    "title": "Kerosene",
+    "subTitle": "Fuel",
+    "description": "Kerosene is distillate fractions of crude oil in the boiling range of 150-250°C. It is a complex mixture of hydrocarbons from crude oil distillation, primarily containing alkanes (paraffins), cycloalkanes (naphthenes) and some aromatics like alkylbenzenes. ",
+    "specifications": [
+      {
+        "property": "Product Name",
+        "value": "Kerosene"
+      },
+      {
+        "property": "Final boiling point, °C",
+        "value": "Max 300"
+      },
+      {
+        "property": "Flash point ( Abel), °C",
+        "value": "Min 35"
+      },
+      {
+        "property": "Smoke Point, mm",
+        "value": "Min 18"
+      }
+    ],
+    "appData": "Kerosene is one of the most versatile hydrocarbon fuels in the industry. Kerosene is used in many industrial applications like heating, cleaning and as thinner. It is also used for lighting lamps in areas where electricity is not available. Use of Public Distribution System (PDS) Kerosene (Blue Dyed) has reduced drastically. Kerosene with ultra-low sulfur content upto 10 mg/kg is used as pipeline compatible plug material (PCK) in multi-product pipeline operations in Petroleum Industry. Chemical industry uses kerosene as a petroleum solvent and in pesticide industry. ",
+    "packaging": ["Bulk"],
+    "Related": ["-"]
+  },
+  "ATF": {
+    "title": "Aviation Turbine Fuel A-1",
+    "subTitle": "AVIATION FUEL",
+    "description": "Aviation Turbine Fuel is a colorless, combustible, straight-run petroleum distillate, kerosene-based fuel. Kerosene makes up the majority of Jet A-1, with trace amounts of additives. ",
+    "specifications": [
+      {
+        "property": "Product Name",
+        "value": "ATF (Jet A-1) (Aviation Turbine Fuel Jet A-1)"
+      },
+      {
+        "property": "Total Acid Number (TAN), mg of KOH/g",
+        "value": "Max 0.20"
+      },
+      {
+        "property": "Distillation, 95 percent v/v, recovery, °C",
+        "value": "Max 360"
+      },
+      { "property": "FAME content, % v/v", "value": "Max 7.0" }
+    ],
+    "appData": "ATF Jet A-1 is used for aircrafts (Military jets) and Civil Aviation sector worldwide. It is a higher quality fuel subjected to stringent Quality Control norms set by DGCA and DGAQA.",
+    "packaging": ["Bulk"],
+    "Related": ["-"]
+  },
+  "LPG": {
+    "title": "Liquefied Petroleum Gas",
+    "subTitle": "COOKING GAS",
+    "description": "Liquefied Petroleum Gas (LPG) is a mixture of propane and butane derived from petroleum which are gaseous at normal ambient temperature and atmospheric pressure but gets condensed to the liquid state at normal ambient temperature by the application of moderate pressure.",
+    "specifications": [
+      {
+        "property": "Product Name",
+        "value": "Liquefied Petroleum Gas"
+      },
+      {
+        "property": "C2 hydrocarbons",
+        "value": "Report (Butane-Propane mixture) / Report (Propane)"
+      },
+      {
+        "property": "C3 hydrocarbons",
+        "value": "Report (Butane) /Report (Butane-Propane mixture) / Min 95.0 (Propane)"
+      },
+      {
+        "property": "C4 hydrocarbons",
+        "value": "Report (Butane) /Report (Butane-Propane mixture) / Max 4.0 (Propane)"
+      }
+    ],
+    "appData": "LPG is mostly used in domestic and commercial purpose for cooking and heating. It is also used in transportation vehicle as a fuel and as metal cutting gas.",
+    "packaging": ["Bulk"],
+    "Related": ["-"]
+  },
+  "HEXANE": {
+    "title": "FOOD GRADE HEXANE",
+    "subTitle": "PROCESS SOLVENT",
+    "description": "Food Grade Hexane is a highly purified petroleum distillate fraction that contains a high proportion of n-hexane with boiling range of 63 to 70°C. It is a clear colourless liquid with distinct odour, free from sediment, suspended matter and moisture. ",
+    "specifications": [
+      {
+        "property": "Product Name",
+        "value": "FOOD GRADE HEXANE"
+      },
+      {
+        "property": "Density at 20°C",
+        "value": "kg/m³ 660.0 to 687.0"
+      },
+      {
+        "property": "Distillation,  Initial Boiling Point °C Min",
+        "value": "63"
+      },
+      { "property": "Sulphur content, mg/kg", "value": "Max 5" }
+    ],
+    "appData": "Food Grade Hexane is used in Food processing industry as a solvent to extract edible oils with minimum harmful residue to meet strict purity standards set by statutory bodies such as FSSAI. It is also used in Drug and Pharmaceuticals industry for drug extraction and as a cleaning agent.. ",
+    "packaging": ["Bulk"],
+    "Related": ["-"]
+  },
+  "LDO": {
+    "title": "Heating Oil (LDO)",
+    "subTitle": "INDUSTRIAL FUEL",
+    "description": "Heating Oil also known as Light Diesel Oil (LDO) consists of medium length chains of hydrogen and carbon mainly alkanes, cycloalkanes, aromatics and oils. Basically, Heating oil is termed for medium commercial extracts from crude oil. It is either distilled or residual fraction of various oils that is extracted while distillation. It has a lower flash point compared to heavier Fuel Oil (FO), for easier ignition. ",
+    "specifications": [
+      {
+        "property": "Product Name",
+        "value": "Heating Oil (LDO)"
+      },
+      {
+        "property": "Acid number, mg KOH/gm",
+        "value": "Max 0.5"
+      },
+      {
+        "property": "Ash, percent by mass",
+        "value": "MAX 0.02"
+      },
+      { "property": "SPour Point, °C, Max 12", "value": "(Winter)/21(Summer)" }
+    ],
+    "appData": "Fuel oil is used as a backup fuel for power generation in facilities where a reliable power supply is crucial. It is used in thermal power plants for boiler start up. It serves as a contingency option during periods of fuel shortages or interruptions in primary fuel sources. Fuel oil is used in various industrial applications for heating purposes. Cement and Steel plants use fuel oil as a source of energy in furnaces for high heat processes.",
+    "packaging": ["Bulk"],
+    "Related": ["-"]
+  },
+  "MV2": {
+    "title": "FO (MV2 Grade)",
+    "subTitle": "INDUSTRIAL FUEL",
+    "description": "Fuel oil is a dark viscous residual fuels obtained by blending mainly heavier components from crude distillation unit. It is generally consisted of heavy petroleum product. Efficiency and type of fuel oil widely varies depending on kinematic viscosity and sulphur content.",
+    "specifications": [
+      {
+        "property": "Product Name",
+        "value": "FO (MV2 Grade)"
+      },
+      {
+        "property": "Carbon residue, mass percent",
+        "value": "Max 18"
+      },
+      {
+        "property": "Flash point (Pensky Martens (closed), °C",
+        "value": "Max 66"
+      },
+      {
+        "property": "Kinematic viscosity in centistokes at 50°C",
+        "value": "125 - 180"
+      }
+    ],
+    "appData": "LDO is known for its efficient combustion properties. This fuel is free flowing in nature. It is largely an industrial fuel. It finds extensive use in industries such as manufacturing, power generation, and heating systems. It is commonly used in boilers, furnaces, and other equipment that require a steady and controlled source of heat. ",
+    "packaging": ["Bulk"],
+    "Related": ["-"]
+  },
+  "LAN": {
+    "title": "Low Aromatic Naphtha",
+    "subTitle": "INDUSTRIAL FEEDSTOCK/FUEL",
+    "description": "Petroleum naphtha is a complex mixture of hydrocarbons, primarily C5–C8 alkanes (paraffins), cycloparaffins, and aromatics, with specific compositions varying significantly based on the crude oil source and refining process. It contains higher percentage of paraffins and low percentage of aromatic hydrocarbons (such as benzene, toluene, and xylene). It also contains sulfur compounds.",
+    "specifications": [
+      {
+        "property": "Product Name",
+        "value": "Low Aromatic Naphtha"
+      },
+      {
+        "property": "Density at 15 °C, kg/m3",
+        "value": "620 - 800"
+      },
+      {
+        "property": "Total sulphur, mass percent",
+        "value": "Max 1.0"
+      },
+      {
+        "property": "Olefins, percent by volume",
+        "value": "Max 40"
+      }
+    ],
+    "appData": "Naphtha is used by refineries in blending of petroleum products, isomerization, reforming, and in the production of value-added products. Naphtha serves as a primary feedstock for the production of gasoline. It is also a crucial component in the manufacturing of various petrochemical products, including plastics, fertilizers, and synthetic fibres. Naphtha is a key raw material for the production of various plastics, including polyethylene (PE), polypropylene (PP), and polystyrene (PS). ",
+    "packaging": ["Bulk"],
+    "Related": ["-"]
+  },
+  "1425": {
+    "title": "Solvent 1425",
+    "subTitle": "PROCESS SOLVENT",
+    "description": "Solvent 1425 is a petroleum-derived industrial solvent having a complex mixture of petroleum hydrocarbons that vary widely in their physical and chemical properties with boiling range between 50 - 120°C. Solvent 1425 is having strong solvency power due to its wide chemical composition. Solvent 1425 is having higher evaporation rate that improves efficiency of the solvent.",
+    "specifications": [
+      {
+        "property": "Product Name",
+        "value": "Solvent 1425"
+      },
+      {
+        "property": "Distillation Initial boiling point °C",
+        "value": "Min 50"
+      },
+      {
+        "property": "Distillation Dry point, °C",
+        "value": "Max 120"
+      },
+      {
+        "property": "Aromatic content, percent by volume",
+        "value": "Max 35"
+      }
+    ],
+    "appData": "Solvent 1425 is a highly versatile hydrocarbon solvent with a wide range of industrial and commercial applications. Solvent 1425 is a potent degreaser, effectively removing oil, grease, wax, and tar from various surfaces. It is commonly used in cleaning engines, parts and tools. Solvent 1425 finds application in the paint and coatings industry. It is used for diluting paints, varnishes, and lacquers to adjust viscosity and improve application. Solvent 1425 as a cleaning and degreasing agent in leather and rubber industry.",
+    "packaging": ["Bulk"],
+    "Related": ["-"]
+  },
+  "MTO": {
+    "title": "Mineral Turpentine Oil",
+    "subTitle": "PROCESS SOLVENT",
+    "description": "Solvent 2445, commonly referred to as MTO, is a petroleum-derived aliphatic hydrocarbon solvent obtained from the middle distillate/naphtha range. It is a water-white, highly volatile, low-viscosity solvent used extensively in paints, adhesives, and chemical industries. It has boiling range between 125 - 240°C.",
+    "specifications": [
+      {
+        "property": "Product Name",
+        "value": "Mineral Turpentine Oil"
+      },
+      {
+        "property": "Flash point (Abel) °C",
+        "value": "Min 30"
+      },
+      {
+        "property": "Distillation Initial boiling point °C",
+        "value": "Min 125"
+      },
+      {
+        "property": "Distillation final boiling point °C",
+        "value": "Max240"
+      }
+    ],
+    "appData": "Solvent 2445 is a versatile and widely used solvent with significant applications across industries. Its high solvency power, low toxicity, moderate evaporation rate, and inertness make it a valuable substance in various cleaning, degreasing, and dissolving processes. Its unique properties make it an essential component in the formulation of paints, adhesives, inks, and numerous other products.",
+    "packaging": ["Bulk"],
+    "Related": ["-"]
+  },
+  "HFHSD": {
+    "title": "High Flash High Speed Diesel Distillate Marine Fuel",
+    "subTitle": "MARINE FUEL",
+    "description": "High Flash High Speed Diesel (HFHSD) is a special grade of diesel fuel with flash point (Min. 66°C) significantly higher than that of HSD (Min. 35°C). It consists of hydrocarbons with carbon numbers predominantly in the range of C9 to C28, with a boiling range of approximately 150°C to 400°C. It is produced by refining middle-distillate fractions to meet stringent safety and performance specifications IS 16731(ISO 8217).",
+    "specifications": [
+      {
+        "property": "Product Name",
+        "value": "High Flash High Speed Diesel Distillate Marine Fuel"
+      },
+      {
+        "property": "Density at 15 °C, kg/m3",
+        "value": "Max 890.0"
+      },
+      {
+        "property": "Cetane Index",
+        "value": "Min 40"
+      },
+      {
+        "property": "Sulfur, mass %",
+        "value": "Max 1.00"
+      }
+    ],
+    "appData": "HFHSD is mainly manufactured for non-automotive applications. It is mainly applicable for marine use by Indian Navy, Merchant Ships, fishing vessels etc. where a high flash point diesel is required.",
+    "packaging": ["Bulk"],
+    "Related": ["-"]
+  },
+  "VLSFO": {
+    "title": "Very Low Sulfur Fuel Oil",
+    "subTitle": "MARINE FUEL",
+    "description": "VLSFO is a type of marine fuel that complies with the International Maritime Organization (IMO) – Marine Oil Pollution Control (MARPOL) regulations to reduce sulphur emissions from ships. It is generally blended from different refinery streams to achieve low sulfur levels while maintaining suitable viscosity and energy content for ship engines. VLSFO is a cleaner marine fuel with very low sulfur content (0.5% by wt. max./as per statutory norms) and prescribed limit of element content in fuel (Na, V, Al, Si, Ca, Zn, P).",
+    "specifications": [
+      {
+        "property": "Product Name",
+        "value": "Very Low Sulfur Fuel Oil"
+      },
+      {
+        "property": "Sulfur, mass %",
+        "value": "Statutory requirements"
+      },
+      {
+        "property": "Flash point, °C",
+        "value": "Min 60.0"
+      },
+      {
+        "property": "Hydrogen sulfide, mg/kg",
+        "value": "Max 2.00"
+      }
+    ],
+    "appData": "VLSFO is primarily used as a marine fuel in ships to comply with IMO regulations. VLSFO is used in various types of vessels, including container ships, bulk carriers, etc.",
+    "packaging": ["Bulk"],
+    "Related": ["-"]
+  },
+  "FO": {
+    "title": "MV2 Grade",
+    "subTitle": "Industrial FUEL",
+    "description": "Fuel oil is a dark viscous residual fuels obtained by blending mainly heavier components from crude distillation unit. It is generally consisted of heavy petroleum product. Efficiency and type of fuel oil widely varies depending on kinematic viscosity and sulphur content.",
+    "specifications": [
+      {
+        "property": "Product Name",
+        "value": "FO (MV2 Grade)"
+      },
+      {
+        "property": "Carbon residue, mass percent",
+        "value": "Max 18"
+      },
+      {
+        "property": "Flash point (Pensky Martens (closed), °C",
+        "value": "Min 66"
+      },
+      {
+        "property": "Sediment, percent by mass",
+        "value": "Max 0.25"
+      }
+    ],
+    "appData": "Fuel oil is used as a backup fuel for power generation in facilities where a reliable power supply is crucial. It is used in thermal power plants for boiler start up. It serves as a contingency option during periods of fuel shortages or interruptions in primary fuel sources. Fuel oil is used in various industrial applications for heating purposes. Cement and Steel plants use fuel oil as a source of energy in furnaces for high heat processes.",
+    "packaging": ["Bulk"],
+    "Related": ["-"]
+  },
+  "LSHS": {
+    "title": "Low Sulphur Heavy Stock",
+    "subTitle": "Industrial FUEL",
+    "description": "Low Sulphur Heavy Stock (LSHS) is a dense, viscous residual product from crude oil distillation, featuring a black, thick liquid form with Low Sulfur (Max. 1.8%) content as per customer requirement.",
+    "specifications": [
+      {
+        "property": "Product Name",
+        "value": "LSHS (Low Sulphur Heavy Stock)"
+      },
+      {
+        "property": "Kinematic viscosity, 100 °C",
+        "value": "Max 100 (Grade 1 & Grade 2)"
+      },
+      {
+        "property": "Flash point, °C",
+        "value": "Min 66 (Grade 1 & Grade 2)"
+      },
+      {
+        "property": "Pour point, °C",
+        "value": "Max 66 (Grade 1) / 72 (Grade 2)"
+      }
+    ],
+    "appData": "LSHS is used mainly in heavy industry, steel plants, and power plants as fuel. LSHS is mainly used in steel production and where the finished product to be heated are likely to get contaminated with sulfur.",
+    "packaging": ["Bulk"],
+    "Related": ["-"]
+  },
+  "Data": {
+    "title": "",
+    "subTitle": "",
+    "description": "",
+    "specifications": [
+      {
+        "property": "Product Name",
+        "value": ""
+      },
+      {
+        "property": "",
+        "value": ""
+      },
+      {
+        "property": "",
+        "value": ""
+      },
+      {
+        "property": "",
+        "value": ""
+      }
+    ],
+    "appData": "",
+    "packaging": [""],
+    "Related": [""]
+  }
+}

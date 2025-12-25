@@ -1,0 +1,19 @@
+export type RootStackParamList = {
+  WelcomeScreen: undefined;
+  HomeScreen: undefined;
+  LoginScreen: undefined;
+  BulkFuelsHome: undefined;
+  FuelsHome: undefined;
+  IndustialLiquids: undefined;
+  IndustrialHome: undefined;
+  IndustrialScreen: undefined;
+  InfoScreen: { name: string };
+  LpgScreen: undefined;
+  LubricantsScreen: undefined;
+  LubricantsHome: undefined;
+  SolventsHome: undefined;
+  SupportScreen: undefined;
+  ProductFinder: undefined;
+  KnowledgeCenter: undefined;
+  InteractiveTools: undefined;
+};

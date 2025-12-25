@@ -1,0 +1,40 @@
+{
+  "name": "Lubricants",
+  "company": "Hindustan Petroleum Corporation Ltd (HPCL)",
+  "variants": [
+    {
+      "type": "Motorcycle Engine Oil",
+      "brand": "HP Racer Gen6",
+      "usage": "2-Wheelers engine lubrication",
+      "pack_sizes_l": [0.9, 1],
+      "viscosity_grade": "20W40",
+      "api_spec": "SL",
+      "notes": "Suitable for all standard motorcycles. Provides better engine protection."
+    },
+    {
+      "type": "Automotive Engine Oil",
+      "brand": "HP Neo Cruise",
+      "usage": "Car engine lubrication",
+      "pack_sizes_l": [1, 3.5],
+      "viscosity_grade": "20W40",
+      "api_spec": "SN",
+      "notes": "Designed for passenger cars. Enhances engine life and fuel efficiency."
+    },
+    {
+      "type": "Industrial Quenching Oil",
+      "brand": "HP MetaQuench 39",
+      "usage": "Metal heat treatment",
+      "pack_sizes_l": [210],
+      "flash_point_c": 150,
+      "notes": "For industrial quenching applications. Ensure proper handling and storage."
+    },
+    {
+      "type": "Industrial Lubricant Oil",
+      "brand": "HP Industrial Oil",
+      "usage": "Machinery and heavy equipment lubrication",
+      "pack_sizes_l": [210],
+      "iso_grade": "VG 32",
+      "notes": "Suitable for industrial machinery. Reduces wear and tear."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "LPG",
+  "company": "Hindustan Petroleum Corporation Ltd (HPCL)",
+  "variants": [
+    {
+      "type": "Domestic LPG",
+      "brand": "HP Gas",
+      "usage": "Household cooking",
+      "cylinder_sizes_kg": [5, 14.2],
+      "composition": "Propane-Butane mix",
+      "regulatory_body": ["PESO", "BIS"],
+      "notes": "For household use only. Not permitted for vehicles."
+    },
+    {
+      "type": "Auto LPG",
+      "brand": "HP AutoGas",
+      "usage": "Automotive fuel",
+      "storage": "Vehicle-mounted LPG tank",
+      "requires_approved_kit": true,
+      "emission_compliance": "BS-VI compatible",
+      "notes": "Only for vehicles with certified Auto LPG kits."
+    }
+  ]
+}
