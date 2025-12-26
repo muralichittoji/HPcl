@@ -2,7 +2,7 @@ import { View, StyleSheet } from 'react-native';
 import React from 'react';
 import Colours from '../Assests/Common/Colors';
 import wholeData from '../Assests/Jsons/wholeData.json';
-import ListMenu from '../Assests/Common/ListMenu';
+import ListMenu2 from '../Assests/Common/ListMenu2';
 import Header from '../Assests/Common/Header';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -53,7 +53,7 @@ const IndustrialHome = () => {
     <View style={styles.container}>
       <Header caption="Bitumen" />
       <InputSearch />
-      <ListMenu
+      <ListMenu2
         items={wholeData.Bitumen}
         getIcons={getIcons}
         itemHeight={170}

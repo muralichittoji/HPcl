@@ -7,8 +7,9 @@ import wholeData from '../Assests/Jsons/wholeData.json';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 // import ListMenu2 from '../Assests/Common/ListMenu2';
-import ListMenu from '../Assests/Common/ListMenu';
-const fuelIcon = '../Assests/Images/icons/fuel_pump.png';
+// import ListMenu from '../Assests/Common/ListMenu';
+import ListMenu2 from '../Assests/Common/ListMenu2';
+// const fuelIcon = '../Assests/Images/icons/fuel_pump.png';
 
 export type RootStackParamList = {
   InfoScreen: { name: string };
@@ -37,14 +38,8 @@ const FuelsHome = () => {
 
   const getIcons = (itemName: string) => {
     switch (itemName) {
-      case 'Petrol':
-        return require(fuelIcon);
-      case 'Diesel':
-        return require(fuelIcon);
-      case 'ATF Jet':
-        return require(fuelIcon);
       default:
-        return require(fuelIcon);
+        return '';
     }
   };
 
@@ -53,7 +48,7 @@ const FuelsHome = () => {
       <Header caption="Motor Fuels" />
       <InputSearch />
       <View>
-        <ListMenu
+        <ListMenu2
           items={wholeData.MotorFuels}
           navigate={navigate}
           getIcons={getIcons}

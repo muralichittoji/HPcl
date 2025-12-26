@@ -1,14 +1,14 @@
 /* eslint-disable react-native/no-inline-styles */
 import {
   Dimensions,
-  Image,
+  // Image,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from 'react-native';
 import React from 'react';
-import Icon from 'react-native-vector-icons/FontAwesome';
+// import Icon from 'react-native-vector-icons/FontAwesome';
 import Colours from './Colors';
 
 const { width } = Dimensions.get('window');
@@ -25,7 +25,7 @@ const getColumns = () => {
 export type Listitem = {
   items: any;
   navigate: any;
-  getIcons: any;
+  getIcons?: any;
   itemHeight: any;
   png?: any;
 };
@@ -33,11 +33,10 @@ export type Listitem = {
 const ListMenu2 = ({
   items,
   navigate,
-  getIcons,
+  // getIcons,
   itemHeight,
   png,
 }: Listitem) => {
-  // Function to get background color based on item
   const backgroundColorSet = [
     Colours.blueLight,
     Colours.greenLight,
@@ -61,13 +60,14 @@ const ListMenu2 = ({
             styles.item,
             {
               height: itemHeight,
-              width: png ? width / columns + 30 : width / columns + 40,
+              width: width / columns + 55,
               backgroundColor: getBackgroundColor(index),
               flexDirection: png ? 'column' : 'row',
+              justifyContent: 'center',
             },
           ]}
         >
-          {png ? (
+          {/* {png ? (
             <View
               style={{
                 width: 95,
@@ -82,7 +82,7 @@ const ListMenu2 = ({
             </View>
           ) : (
             <Icon name={getIcons(item)} color={'#fff'} size={20} />
-          )}
+          )} */}
           <Text style={styles.text}>{item}</Text>
         </TouchableOpacity>
       ))}
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
   },
   text: {
     textAlign: 'center',
-    fontSize: 17,
+    fontSize: 30,
     color: 'white',
     fontWeight: '700',
   },

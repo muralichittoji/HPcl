@@ -3,7 +3,7 @@ import React from 'react';
 import Header from '../Assests/Common/Header';
 import InputSearch from '../Assests/Common/InputSearch';
 import wholeData from '../Assests/Jsons/wholeData.json';
-import ListMenu from '../Assests/Common/ListMenu';
+import ListMenu2 from '../Assests/Common/ListMenu2';
 import { useNavigation } from '@react-navigation/native';
 const TankerIcon = '../Assests/Images/icons/bulk_tanker.png';
 
@@ -29,7 +29,7 @@ const BulkFuelsHome = () => {
     <View style={styles.container}>
       <Header caption="Bulk Fuels" />
       <InputSearch />
-      <ListMenu
+      <ListMenu2
         items={wholeData.BulkFuel}
         png={true}
         navigate={navigate}

@@ -4,7 +4,8 @@ import Header from '../Assests/Common/Header';
 import InputSearch from '../Assests/Common/InputSearch';
 import { useNavigation } from '@react-navigation/native';
 import wholeData from '../Assests/Jsons/wholeData.json';
-import ListMenu from '../Assests/Common/ListMenu';
+// import ListMenu from '../Assests/Common/ListMenu';
+import ListMenu2 from '../Assests/Common/ListMenu2';
 const SolventsIcon = '../Assests/Images/icons/PMB.png';
 
 const SolventsHome = () => {
@@ -29,7 +30,7 @@ const SolventsHome = () => {
       <Header caption="Solvents" />
       <InputSearch />
       <View>
-        <ListMenu
+        <ListMenu2
           items={wholeData.Solvents}
           navigate={navigate}
           png={true}
