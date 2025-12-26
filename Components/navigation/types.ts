@@ -16,4 +16,5 @@ export type RootStackParamList = {
   ProductFinder: undefined;
   KnowledgeCenter: undefined;
   InteractiveTools: undefined;
+  SelectedData: undefined;
 };

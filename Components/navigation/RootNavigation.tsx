@@ -19,6 +19,7 @@ import SupportScreen from '../Pages/SupportScreen';
 import ProductFinder from '../Assests/Common/ProductFinder';
 import KnowledgeCenter from '../Assests/Common/KnowledgeCenter';
 import InteractiveTools from '../Assests/Common/InteractiveTools';
+import SelectedData from '../Assests/Common/SelectedData';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -114,6 +115,11 @@ const RootNavigator = () => {
         <Stack.Screen
           name="InteractiveTools"
           component={InteractiveTools}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="SelectedData"
+          component={SelectedData}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

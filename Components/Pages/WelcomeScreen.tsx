@@ -31,8 +31,7 @@ const WelcomeScreen = () => {
         <View>
           <Text style={styles.content}>Your Petroleum Product Catalogue</Text>
           <Text style={styles.description}>
-            Explore Your Favourite Motor Fuels, LPG, Lubricants, Industrial
-            Fuels and more
+            Explore Motor Fuels, LPG, Lubricants, Industrial Fuels and more
           </Text>
           <TouchableOpacity
             style={styles.enterBtn}

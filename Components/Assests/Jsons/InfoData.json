@@ -82,7 +82,7 @@
       },
       { "property": "Ethanol content, percent", "value": "19-20" }
     ],
-    "appData": "Primarily used in transportation (Cars, Sport Utility Vehicles, Motorcycles and Scooters). E20 Fuel was launched in India on 6th Feb 2023. As on date regular MS is substituted by E20 MS. It is observed that E20 fuel is being used in existing spark-ignition engine. E20 fuel has several advantages over conventional MS, such as it reduces vehicular tailpipe emissions by lowering the carbon monoxide, hydrocarbons and nitrogen oxides levels.",
+    "appData": "Primarily used in transportation (Cars, Sport Utility Vehicles, Motorcycles and Scooters).",
     "packaging": ["Bulk", "Retail"],
     "Related": ["MS POWER 95"]
   },
@@ -102,7 +102,7 @@
       },
       { "property": "FAME content, % v/v", "value": "Max 7.0" }
     ],
-    "appData": "HSD is commonly used as a fuel in medium and high-speed compression ignition engine in commercial vehicle, stationery diesel engines, locomotive and pumps etc. It is also used as fuel in power generation (DG sets), agriculture and construction machinery",
+    "appData": "HSD is commonly used as a fuel in medium and high-speed compression ignition engine in commercial vehicle, stationery diesel engines, locomotive and pumps etc. It is also used as fuel in power generation (DG sets), agriculture and construction machinery.",
     "packaging": ["Bulk"],
     "Related": ["HP TURBOJET"]
   },
@@ -154,8 +154,8 @@
         "value": "Min 18"
       }
     ],
-    "appData": "Kerosene is one of the most versatile hydrocarbon fuels in the industry. Kerosene is used in many industrial applications like heating, cleaning and as thinner. It is also used for lighting lamps in areas where electricity is not available. Use of Public Distribution System (PDS) Kerosene (Blue Dyed) has reduced drastically. Kerosene with ultra-low sulfur content upto 10 mg/kg is used as pipeline compatible plug material (PCK) in multi-product pipeline operations in Petroleum Industry. Chemical industry uses kerosene as a petroleum solvent and in pesticide industry. ",
-    "packaging": ["Bulk"],
+    "appData": "Kerosene is used in many industrial applications like heating, cleaning and as thinner. It is also used for lighting lamps in areas where electricity is not available. \nKerosene with ultra-low sulfur content upto 10 mg/kg is used as pipeline compatible plug material (PCK) in multi-product pipeline operations in Petroleum Industry. Chemical industry uses kerosene as a petroleum solvent and in pesticide industry.",
+    "packaging": ["-"],
     "Related": ["-"]
   },
   "ATF": {
@@ -172,8 +172,8 @@
         "value": "Max 0.20"
       },
       {
-        "property": "Distillation, 95 percent v/v, recovery, °C",
-        "value": "Max 360"
+        "property": "Distillation, 95 percent v/v, recovery",
+        "value": "Max 360°C"
       },
       { "property": "FAME content, % v/v", "value": "Max 7.0" }
     ],
@@ -226,7 +226,7 @@
       },
       { "property": "Sulphur content, mg/kg", "value": "Max 5" }
     ],
-    "appData": "Food Grade Hexane is used in Food processing industry as a solvent to extract edible oils with minimum harmful residue to meet strict purity standards set by statutory bodies such as FSSAI. It is also used in Drug and Pharmaceuticals industry for drug extraction and as a cleaning agent.. ",
+    "appData": "Food Grade Hexane is used in Food processing industry as a solvent to extract edible oils with minimum harmful residue to meet strict purity standards set by statutory bodies such as FSSAI. It is also used in Drug and Pharmaceuticals industry for drug extraction and as a cleaning agent.",
     "packaging": ["Bulk"],
     "Related": ["-"]
   },
@@ -249,7 +249,7 @@
       },
       { "property": "SPour Point, °C, Max 12", "value": "(Winter)/21(Summer)" }
     ],
-    "appData": "Fuel oil is used as a backup fuel for power generation in facilities where a reliable power supply is crucial. It is used in thermal power plants for boiler start up. It serves as a contingency option during periods of fuel shortages or interruptions in primary fuel sources. Fuel oil is used in various industrial applications for heating purposes. Cement and Steel plants use fuel oil as a source of energy in furnaces for high heat processes.",
+    "appData": "FLDO is known for its efficient combustion properties. This fuel is free flowing in nature. \nIt finds extensive use in industries such as manufacturing, power generation, and heating systems. It is commonly used in boilers, furnaces, and other equipment that require a steady and controlled source of heat. ",
     "packaging": ["Bulk"],
     "Related": ["-"]
   },
@@ -301,7 +301,7 @@
         "value": "Max 40"
       }
     ],
-    "appData": "Naphtha is used by refineries in blending of petroleum products, isomerization, reforming, and in the production of value-added products. Naphtha serves as a primary feedstock for the production of gasoline. It is also a crucial component in the manufacturing of various petrochemical products, including plastics, fertilizers, and synthetic fibres. Naphtha is a key raw material for the production of various plastics, including polyethylene (PE), polypropylene (PP), and polystyrene (PS). ",
+    "appData": "Naphtha is used by refineries in blending of petroleum products, isomerization, reforming, and in the production of value-added products. Naphtha serves as a primary feedstock for the production of gasoline. It is also a crucial component in the manufacturing of various petrochemical products, including plastics, fertilizers, and synthetic fibres. Naphtha is a key raw material for the production of various plastics, including polyethylene (PE), polypropylene (PP), and polystyrene (PS).",
     "packaging": ["Bulk"],
     "Related": ["-"]
   },
@@ -327,7 +327,7 @@
         "value": "Max 35"
       }
     ],
-    "appData": "Solvent 1425 is a highly versatile hydrocarbon solvent with a wide range of industrial and commercial applications. Solvent 1425 is a potent degreaser, effectively removing oil, grease, wax, and tar from various surfaces. It is commonly used in cleaning engines, parts and tools. Solvent 1425 finds application in the paint and coatings industry. It is used for diluting paints, varnishes, and lacquers to adjust viscosity and improve application. Solvent 1425 as a cleaning and degreasing agent in leather and rubber industry.",
+    "appData": " Solvent 1425 is a potent degreaser, effectively removing oil, grease, wax, and tar from various surfaces. It is commonly used in cleaning engines, parts and tools. Solvent 1425 finds application in the paint and coatings industry. It is used for diluting paints, varnishes, and lacquers to adjust viscosity and improve application. Solvent 1425 as a cleaning and degreasing agent in leather and rubber industry.",
     "packaging": ["Bulk"],
     "Related": ["-"]
   },
@@ -353,7 +353,7 @@
         "value": "Max240"
       }
     ],
-    "appData": "Solvent 2445 is a versatile and widely used solvent with significant applications across industries. Its high solvency power, low toxicity, moderate evaporation rate, and inertness make it a valuable substance in various cleaning, degreasing, and dissolving processes. Its unique properties make it an essential component in the formulation of paints, adhesives, inks, and numerous other products.",
+    "appData": "Solvent 2445's high solvency power, low toxicity, moderate evaporation rate, and inertness make it a valuable substance in various cleaning, degreasing, and dissolving processes. Its unique properties make it an essential component in the formulation of paints, adhesives, inks, and numerous other products.",
     "packaging": ["Bulk"],
     "Related": ["-"]
   },

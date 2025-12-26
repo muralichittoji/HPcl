@@ -22,7 +22,7 @@ type RootStackParamList = {
 
 const BITUMEN_GRADES = ['VG-10', 'VG-30', 'VG-40'];
 // const Industrial_Liquids = ['Hexane', 'LDO', 'MV2'];
-const FUEL_TYPES = ['Fuels', 'Petrol', 'Diesel'];
+const FUEL_TYPES = ['E20', 'HSD', 'ATF', 'Ethanol', 'Kerosene'];
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 

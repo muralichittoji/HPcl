@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
   },
 
   description: {
-    fontSize: 14,
+    fontSize: 16,
     color: '#334155',
     lineHeight: 20,
     textAlign: 'justify',

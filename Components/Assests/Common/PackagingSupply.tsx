@@ -49,6 +49,8 @@ const PackagingSupply = ({ data }: any) => {
       <View style={styles.dividerGreen} />
       <View style={styles.mapContainer}>
         {data.map((item: any) => {
+          if (item === '-')
+            return <Text style={{ fontSize: 16, fontWeight: '700' }}>-</Text>;
           const config = PACKAGE_MAP[item];
           return (
             <TouchableOpacity
