@@ -47,7 +47,7 @@ npm i --legacy-peer-deps
 
 # for android, you need to install android studio and also need to add the required lines to the following to make the environment run
 
-__ for macbook/linux only on regarding the shell you are using, on linux it will be ~/.bashrc, on mac its ~/.zshrc __
+# __ for macbook/linux only on regarding the shell you are using, on linux it will be ~/.bashrc, on mac its ~/.zshrc __
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator                                        
 export PATH=$PATH:$ANDROID_HOME/platform-tools                                  
