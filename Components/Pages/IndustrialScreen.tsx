@@ -9,7 +9,7 @@ import Header from '../Assests/Common/Header';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import ListMenu from '../Assests/Common/ListMenu';
 import { RootStackParamList } from '../navigation/types';
-const BitumenIcon = '../Assests/Images/icons/bitumen_icon.png';
+const BitumenIcon = '../Assests/Images/icons/Drums.png';
 const TankerIcon = '../Assests/Images/icons/bulk_tanker.png';
 const SolventsIcon = '../Assests/Images/icons/PMB.png';
 const LiquidIcon = '../Assests/Images/icons/Waterproofing.png';

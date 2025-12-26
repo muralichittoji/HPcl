@@ -87,7 +87,7 @@ const HomeScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Header caption="Product Catalogue" />
+      <Header caption={'Product \nCatalogue'} />
       <InputSearch />
       <ScrollView
         contentContainerStyle={{
