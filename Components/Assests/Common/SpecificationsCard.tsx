@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import Colours from './Colors';
 
 const SpecificationsCard = ({ data }: any) => {
   return (
@@ -45,29 +46,33 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
     marginBottom: 12,
+    gap: 10,
   },
 
   iconCircle: {
-    width: 40,
-    height: 40,
+    width: 65,
+    height: 65,
     borderRadius: 20,
     backgroundColor: '#E0F2FE',
     justifyContent: 'center',
     alignItems: 'center',
-    marginRight: 10,
+    // marginRight: 10,
   },
 
   icon: {
-    fontSize: 18,
+    fontSize: 45,
     color: '#0369A1',
     fontWeight: '700',
+    textAlign: 'center',
   },
 
   headerText: {
-    fontSize: 20,
+    textAlign: 'center',
+    color: Colours.blueDark,
+    fontSize: 25,
     fontWeight: '700',
-    color: '#0F172A',
   },
 
   /* Table */

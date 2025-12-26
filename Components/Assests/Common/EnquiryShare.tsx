@@ -19,7 +19,7 @@ const EnquiryShare = ({ data }: any) => {
   const Enquiry = [
     {
       id: 1,
-      title: 'Enquire Now',
+      title: 'Enquire \nNow',
       icon: require(EnquireIcon),
       colors: Colours.blueBright,
     },
@@ -63,7 +63,7 @@ const EnquiryShare = ({ data }: any) => {
         openEmail();
         break;
 
-      case 'Enquire Now':
+      case 'Enquire \nNow':
         // future: enquiry form
         break;
 
@@ -88,7 +88,7 @@ const EnquiryShare = ({ data }: any) => {
             style={[styles.appBtn, { backgroundColor: item.colors }]}
             onPress={() => handleAction(item.title)}
           >
-            {item.title !== 'Enquire Now' ? (
+            {item.title !== 'Enquire \nNow' ? (
               <Image
                 source={item.icon}
                 style={[

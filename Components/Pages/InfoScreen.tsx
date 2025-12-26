@@ -55,7 +55,9 @@ const InfoScreen = ({ route }: InfoScreenProps) => {
           <View style={styles.divider} />
 
           {/* Description */}
-          <Text style={styles.description}>{data.description}</Text>
+          <View style={{ margin: 5 }}>
+            <Text style={styles.description}>{data.description}</Text>
+          </View>
           <View>
             <SpecificationsCard data={data.specifications} />
           </View>
