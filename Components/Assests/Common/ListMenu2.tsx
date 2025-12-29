@@ -67,22 +67,6 @@ const ListMenu2 = ({
             },
           ]}
         >
-          {/* {png ? (
-            <View
-              style={{
-                width: 95,
-                height: 95,
-              }}
-            >
-              <Image
-                source={getIcons(item)}
-                style={[styles.icons]}
-                resizeMode="contain"
-              />
-            </View>
-          ) : (
-            <Icon name={getIcons(item)} color={'#fff'} size={20} />
-          )} */}
           <Text style={styles.text}>{item}</Text>
         </TouchableOpacity>
       ))}

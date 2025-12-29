@@ -22,7 +22,7 @@ const IndustrialScreen = () => {
   const navigate = (itemName: string) => {
     switch (itemName) {
       case 'Bitumen':
-        navigation.navigate('IndustrialHome');
+        navigation.navigate('BitumenScreen');
         break;
       case 'Industrial Liquids':
         navigation.navigate('InfoScreen', { name: 'LSHS' });

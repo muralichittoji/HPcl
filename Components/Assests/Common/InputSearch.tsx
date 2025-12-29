@@ -4,21 +4,9 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import CameraScreen from './Camera';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useNavigation, useRoute } from '@react-navigation/native';
+import { RootStackParamList } from '../../navigation/types';
 
 const { width } = Dimensions.get('window');
-
-type RootStackParamList = {
-  FuelsHome: undefined;
-  LpgScreen: undefined;
-  LubricantsHome: undefined;
-  ContantScreen: undefined;
-  IndustrialScreen: undefined;
-  KnowledgeCenter: undefined;
-  ProductFinder: undefined;
-  InteractiveTools: undefined;
-  IndustrialHome: undefined;
-  InfoScreen: { name: string };
-};
 
 const BITUMEN_GRADES = ['VG-10', 'VG-30', 'VG-40'];
 // const Industrial_Liquids = ['Hexane', 'LDO', 'MV2'];
@@ -54,7 +42,7 @@ const InputSearch = () => {
     }
 
     /* =============== INDUSTRIAL HOME =============== */
-    if (screenName === 'IndustrialHome') {
+    if (screenName === 'BitumenScreen') {
       const matchedGrade = BITUMEN_GRADES.find(
         grade => grade.toLowerCase() === normalizedSearch,
       );
@@ -77,7 +65,7 @@ const InputSearch = () => {
       case 'bitumen':
       case 'bitumens':
       case 'products used for road':
-        navigation.navigate('IndustrialHome');
+        navigation.navigate('BitumenScreen');
         break;
 
       case 'fuels':

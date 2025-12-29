@@ -7,7 +7,6 @@ import HomeScreen from '../Pages/HomeScreen';
 import BulkFuelsHome from '../Pages/BulkFuelsHome';
 import FuelsHome from '../Pages/FuelsHome';
 import IndustialLiquids from '../Pages/IndustialLiquids';
-import IndustrialHome from '../Pages/IndustrialHome';
 import IndustrialScreen from '../Pages/IndustrialScreen';
 import InfoScreen from '../Pages/InfoScreen';
 import LoginScreen from '../Pages/LoginScreen';
@@ -20,6 +19,7 @@ import ProductFinder from '../Assests/Common/ProductFinder';
 import KnowledgeCenter from '../Assests/Common/KnowledgeCenter';
 import InteractiveTools from '../Assests/Common/InteractiveTools';
 import SelectedData from '../Assests/Common/SelectedData';
+import BitumenScreen from '../Pages/BitumenScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -58,8 +58,8 @@ const RootNavigator = () => {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="IndustrialHome"
-          component={IndustrialHome}
+          name="BitumenScreen"
+          component={BitumenScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen

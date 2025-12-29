@@ -8,11 +8,12 @@
     "Lubricants & Maintenance",
     "Safety & Heading"
   ],
+  "Lubricants": ["HYT-500", "HYT-600", "DEF"],
   "Bitumen": ["VG-10", "VG-30", "VG-40"],
   "MotorFuels": ["E20", "HSD", "ATF", "Ethanol", "Kerosene"],
   "IndusLiquids": ["LSHS"],
   "Solvents": ["LAN", "HEXANE", "1425", "MTO"],
-  "LPG": ["LPG"],
+  "LPG": ["HPGas", "HGFP"],
   "BulkFuel": ["FO", "LDO", "HFHSD"],
   "Comparison": [
     "VG-10",
@@ -34,9 +35,9 @@
     "HFHSD"
   ],
   "products": [
-    { "id": 1, "label": "Paving Bitumen (VG10)", "value": "VG-10" },
-    { "id": 2, "label": "Paving Bitumen (VG30)", "value": "VG-30" },
-    { "id": 3, "label": "Paving Bitumen (VG40)", "value": "VG-40" },
+    { "id": 1, "label": "Paving Bitumen (VG-10)", "value": "VG-10" },
+    { "id": 2, "label": "Paving Bitumen (VG-30)", "value": "VG-30" },
+    { "id": 3, "label": "Paving Bitumen (VG-40)", "value": "VG-40" },
     { "id": 4, "label": "E20 MS", "value": "E20" },
     { "id": 5, "label": "High Speed Diesel (HSD)", "value": "HSD" },
     { "id": 6, "label": "Aviation Turbine Fuel", "value": "ATF" },
@@ -61,6 +62,190 @@
       "value": "VLSFO"
     }
   ],
+  "industrySet": [
+    "Roads / Highways",
+    "Transportation & Logistics",
+    "Construction & Infrastructure",
+    "Manufacturing & Industrial Processing",
+    "Power & Utilities",
+    "Marine & Shipping",
+    "Paints, Coatings & Chemicals",
+    "Food & Pharma"
+  ],
+
+  "applicationSet": [
+    "Road Surfacing",
+    "Pavement Construction",
+    "Road Maintenance & Repair",
+    "Surface Dressing",
+    "Commercial Vehicle Fuel",
+    "Fleet Operations",
+    "Long-Haul Transport",
+    "Construction Equipment Fuel",
+    "Temporary Power Generation",
+    "Industrial Heating",
+    "Furnace & Boiler Fuel",
+    "Industrial Process Heating",
+    "Machinery Cleaning & Degreasing",
+    "DG Set Fuel",
+    "Captive Power Generation",
+    "Backup Power Supply",
+    "Marine Main Engine Fuel",
+    "Marine Auxiliary Engine Fuel",
+    "Paint & Coating Thinner",
+    "Industrial Solvent Use",
+    "Chemical Processing",
+    "Extraction Process"
+  ],
+
+  "operatingConditionSet": [
+    "Hot climate, Heavy traffic",
+    "Cold climate, Low traffic",
+    "Very heavy traffic, Extreme load",
+    "Hot climate",
+    "Cold climate",
+    "Moderate climate",
+    "Low traffic",
+    "Medium traffic",
+    "Heavy load, Long haul",
+    "Emission sensitive",
+    "Continuous operation",
+    "High performance required",
+    "Heavy duty, Rugged use",
+    "Continuous running",
+    "Higher flash point required",
+    "High flash point required",
+    "Cost-sensitive",
+    "Stable combustion required",
+    "Industrial grade acceptable",
+    "High flash point",
+    "Intermittent use",
+    "IMO sulphur compliance",
+    "Cost optimization",
+    "Low aromatic requirement",
+    "Controlled evaporation",
+    "Food-grade mandatory"
+  ],
+
+  "eligibleRecommendedProductSet": [
+    "VG-30",
+    "VG-10",
+    "VG-40",
+    "VG-10 / VG-30",
+    "HSD",
+    "HFHSD",
+    "LDO",
+    "LSHS",
+    "FO (MV2)",
+    "LAN / Solvent 1425",
+    "VLSFO (RMG 380)",
+    "MTO / Solvent 2445",
+    "LAN",
+    "Solvent 1425",
+    "Food Grade Hexane"
+  ],
+
+  "PICKER_DATA": {
+    "Roads / Highways": {
+      "Road Surfacing": {
+        "Hot climate, Heavy traffic": ["VG-30"],
+        "Cold climate, Low traffic": ["VG-10"],
+        "Very heavy traffic, Extreme load": ["VG-40"]
+      },
+      "Pavement Construction": {
+        "Hot climate": ["VG-30"],
+        "Cold climate": ["VG-10"]
+      },
+      "Road Maintenance & Repair": {
+        "Moderate climate": ["VG-10 / VG-30"]
+      },
+      "Surface Dressing": {
+        "Low traffic": ["VG-10"],
+        "Medium traffic": ["VG-30"]
+      }
+    },
+
+    "Transportation & Logistics": {
+      "Commercial Vehicle Fuel": {
+        "Heavy load, Long haul": ["HSD"],
+        "Emission sensitive": ["HFHSD"]
+      },
+      "Fleet Operations": {
+        "Continuous operation": ["HSD"]
+      },
+      "Long-Haul Transport": {
+        "High performance required": ["HFHSD"]
+      }
+    },
+
+    "Construction & Infrastructure": {
+      "Construction Equipment Fuel": {
+        "Heavy duty, Rugged use": ["HSD"],
+        "Emission sensitive": ["HFHSD"]
+      },
+      "Temporary Power Generation": {
+        "Continuous running": ["HSD"]
+      },
+      "Industrial Heating": {
+        "Higher flash point required": ["LDO"]
+      }
+    },
+
+    "Manufacturing & Industrial Processing": {
+      "Furnace & Boiler Fuel": {
+        "High flash point required": ["LSHS"],
+        "Cost-sensitive": ["FO (MV2)"]
+      },
+      "Industrial Process Heating": {
+        "Stable combustion required": ["LSHS"]
+      },
+      "Machinery Cleaning & Degreasing": {
+        "Industrial grade acceptable": ["LAN / 1425"]
+      }
+    },
+
+    "Power & Utilities": {
+      "DG Set Fuel": {
+        "Continuous operation": ["HSD"],
+        "Emission sensitive": ["HFHSD"]
+      },
+      "Captive Power Generation": {
+        "High flash point": ["LSHS"]
+      },
+      "Backup Power Supply": {
+        "Intermittent use": ["HSD"]
+      }
+    },
+
+    "Marine & Shipping": {
+      "Marine Main Engine Fuel": {
+        "IMO sulphur compliance": ["VLSFO (RMG 380)"]
+      },
+      "Marine Auxiliary Engine Fuel": {
+        "High flash point": ["LSHS"],
+        "Cost optimization": ["FO (MV2)"]
+      }
+    },
+
+    "Paints, Coatings & Chemicals": {
+      "Paint & Coating Thinner": {
+        "Industrial grade acceptable": ["MTO / Solvent 2445"]
+      },
+      "Industrial Solvent Use": {
+        "Low aromatic requirement": ["LAN"]
+      },
+      "Chemical Processing": {
+        "Controlled evaporation": ["1425"]
+      }
+    },
+
+    "Food & Pharma": {
+      "Extraction Process": {
+        "Food-grade mandatory": ["Food Grade Hexane"]
+      }
+    }
+  },
+
   "android": [
     "cd android",
     "./gradlew clean",

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useMemo, useState } from 'react';
 import {
   View,
   Text,
@@ -6,126 +6,173 @@ import {
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
+import DropDownPicker from 'react-native-dropdown-picker';
 import LinearGradient from 'react-native-linear-gradient';
+import { useNavigation } from '@react-navigation/native';
+
 import Header from './Header';
 import InputSearch from './InputSearch';
-import { useNavigation } from '@react-navigation/native';
 import Colours from './Colors';
 
-const PRODUCT_RULES = [
-  {
-    industry: 'roads',
-    application: 'surfacing',
-    condition: 'hot',
-    product: {
-      name: 'VG-30',
-      description: 'Viscosity grade bitumen for hot mix asphalt',
-    },
-  },
-];
+import wholeData from '../Jsons/wholeData.json';
+
+type PickerJSON = {
+  [industry: string]: {
+    [application: string]: {
+      [condition: string]: string[];
+    };
+  };
+};
 
 const ProductFinder = () => {
-  const [industry, setIndustry] = useState('');
-  const [application, setApplication] = useState('');
-  const [condition, setCondition] = useState('');
-  const [suggestedProduct, setSuggestedProduct] = useState<any>(null);
   const navigation = useNavigation<any>();
+  const pickerData = wholeData.PICKER_DATA as PickerJSON;
 
-  useEffect(() => {
-    const match = PRODUCT_RULES.find(
-      item =>
-        item.industry === industry &&
-        item.application === application &&
-        item.condition === condition,
+  /** ---------------- Industry ---------------- */
+  const [industryOpen, setIndustryOpen] = useState(false);
+  const [industry, setIndustry] = useState<string | null>(null);
+  const industryItems = useMemo(
+    () =>
+      Object.keys(pickerData).map(item => ({
+        label: item,
+        value: item,
+      })),
+    [pickerData],
+  );
+
+  /** ---------------- Application ---------------- */
+  const [applicationOpen, setApplicationOpen] = useState(false);
+  const [application, setApplication] = useState<string | null>(null);
+  const applicationItems = useMemo(() => {
+    if (!industry) return [];
+
+    const apps = pickerData[industry];
+    if (!apps) return [];
+
+    return Object.keys(apps).map(item => ({
+      label: item,
+      value: item,
+    }));
+  }, [industry, pickerData]);
+
+  /** ---------------- Condition ---------------- */
+  const [conditionOpen, setConditionOpen] = useState(false);
+  const [condition, setCondition] = useState<string | null>(null);
+  const conditionItems = useMemo(() => {
+    if (!industry || !application) return [];
+
+    const conditions = pickerData[industry]?.[application];
+    if (!conditions) return [];
+
+    return Object.keys(conditions).map(item => ({
+      label: item,
+      value: item,
+    }));
+  }, [industry, application, pickerData]);
+
+  /** ---------------- Products ---------------- */
+  const products = useMemo(() => {
+    if (!industry || !application || !condition) return [];
+
+    const raw = pickerData?.[industry]?.[application]?.[condition] ?? [];
+
+    return raw.flatMap(item =>
+      item.includes('/') ? item.split('/').map(v => v.trim()) : [item],
     );
-
-    setSuggestedProduct(match ? match.product : null);
-  }, [industry, application, condition]);
+  }, [industry, application, condition, pickerData]);
 
   return (
     <View style={styles.container}>
-      <Header caption={'Product Finder'} />
+      <Header caption="Product Finder" />
       <InputSearch />
 
       <ScrollView
-        contentContainerStyle={{ paddingBottom: 180 }}
-        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ paddingBottom: 50 }}
+        keyboardShouldPersistTaps="handled"
       >
-        <View style={{ paddingHorizontal: 20 }}>
+        <View style={styles.inner}>
           {/* Industry */}
           <Text style={styles.label}>Industry</Text>
-          <View style={styles.dropdown}>
-            <Picker
-              style={styles.picker}
-              selectedValue={industry}
-              onValueChange={setIndustry}
-            >
-              <Picker.Item label="Select Item" value="" />
-              <Picker.Item label="Roads / Highways" value="roads" />
-              <Picker.Item label="Construction" value="construction" />
-            </Picker>
-          </View>
+          <DropDownPicker
+            open={industryOpen}
+            value={industry}
+            items={industryItems}
+            setOpen={setIndustryOpen}
+            setValue={setIndustry}
+            onChangeValue={() => {
+              setApplication(null);
+              setCondition(null);
+            }}
+            placeholder="Select Industry"
+            listMode="SCROLLVIEW"
+          />
 
           {/* Application */}
           <Text style={styles.label}>Application</Text>
-          <View style={styles.dropdown}>
-            <Picker
-              style={styles.picker}
-              selectedValue={application}
-              onValueChange={setApplication}
+          <DropDownPicker
+            open={applicationOpen}
+            value={application}
+            listMode="SCROLLVIEW"
+            items={applicationItems}
+            setOpen={setApplicationOpen}
+            setValue={setApplication}
+            placeholder="Select Application"
+            disabled={!industry}
+            style={styles.dropdown}
+            dropDownContainerStyle={styles.dropdownContainer}
+            zIndex={2000}
+            zIndexInverse={2000}
+          />
+
+          {/* Condition */}
+          <Text style={styles.label}>Operating Conditions</Text>
+          <DropDownPicker
+            open={conditionOpen}
+            value={condition}
+            items={conditionItems}
+            listMode="SCROLLVIEW"
+            setOpen={setConditionOpen}
+            setValue={setCondition}
+            placeholder="Select Condition"
+            disabled={!application}
+            style={styles.dropdown}
+            dropDownContainerStyle={styles.dropdownContainer}
+            zIndex={1000}
+            zIndexInverse={3000}
+          />
+
+          {/* Results */}
+          {products.map(product => (
+            <LinearGradient
+              key={product}
+              colors={['#1D4ED8', '#0EA5E9']}
+              style={styles.productCard}
             >
-              <Picker.Item label="Select Item" value="" />
-              <Picker.Item label="Road surfacing" value="surfacing" />
-              <Picker.Item label="Paving" value="paving" />
-            </Picker>
-          </View>
-
-          {/* Conditions */}
-          <Text style={styles.label}>Conditions</Text>
-          <View style={styles.dropdown}>
-            <Picker
-              style={styles.picker}
-              selectedValue={condition}
-              onValueChange={setCondition}
-            >
-              <Picker.Item label="Select Item" value="" />
-              <Picker.Item label="Hot" value="hot" />
-              <Picker.Item label="Cold" value="cold" />
-            </Picker>
-          </View>
-
-          {/* Suggested Product */}
-          {suggestedProduct && (
-            <>
-              <Text style={styles.suggested}>Suggested Product</Text>
-
-              <LinearGradient
-                colors={['#1D4ED8', '#0EA5E9']}
-                style={styles.productCard}
-              >
-                <Text style={styles.productTitle}>{suggestedProduct.name}</Text>
-
+              <View>
+                <Text style={styles.productTitle}>{product}</Text>
                 <Text style={styles.productDesc}>
-                  {suggestedProduct.description}
+                  Eligible / Recommended Product
                 </Text>
 
                 <View style={styles.buttonRow}>
                   <TouchableOpacity
                     style={styles.outlineBtn}
                     onPress={() =>
-                      navigation.navigate('InfoScreen', { name: 'VG-30' })
+                      navigation.navigate('InfoScreen', {
+                        name: product,
+                      })
                     }
                   >
                     <Text style={styles.outlineText}>View Specifications</Text>
                   </TouchableOpacity>
+
                   <TouchableOpacity style={styles.outlineBtn}>
                     <Text style={styles.outlineText}>Enquire</Text>
                   </TouchableOpacity>
                 </View>
-              </LinearGradient>
-            </>
-          )}
+              </View>
+            </LinearGradient>
+          ))}
         </View>
       </ScrollView>
     </View>
@@ -135,49 +182,61 @@ const ProductFinder = () => {
 export default ProductFinder;
 
 const styles = StyleSheet.create({
-  container: { height: '100%', backgroundColor: '#FFFFFF' },
-  /* Header */ header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 16,
+  container: {
+    flex: 1,
+    backgroundColor: Colours.white,
   },
-  picker: { color: Colours.black },
-  back: { fontSize: 28, marginRight: 10 },
-  headerTitle: { flex: 1, fontSize: 18, fontWeight: '700', color: '#0F172A' },
-  logo: { fontWeight: '800', color: '#1E3A8A' },
-  /* Search */ searchBox: {
-    flexDirection: 'row',
-    backgroundColor: '#F1F5F9',
-    borderRadius: 12,
-    paddingHorizontal: 14,
-    alignItems: 'center',
-    marginBottom: 20,
+  inner: {
+    paddingHorizontal: 20,
   },
-  searchInput: { flex: 1, height: 44, fontSize: 14 },
-  mic: { fontSize: 20 },
-  /* Form */ label: { fontSize: 18, fontWeight: '700', marginBottom: 6 },
+  label: {
+    marginTop: 20,
+    marginBottom: 6,
+    fontSize: 14,
+    fontWeight: '600',
+    color: Colours.black,
+  },
   dropdown: {
-    borderWidth: 1,
-    borderColor: '#CBD5E1',
-    borderRadius: 10,
-    marginBottom: 16,
-    overflow: 'hidden',
+    borderColor: '#E5E7EB',
+    borderRadius: 8,
+    minHeight: 48,
   },
-  suggested: { fontSize: 16, fontWeight: '700', marginVertical: 12 },
-  /* Product Card */ productCard: {
-    borderRadius: 16,
-    padding: 18,
-    height: 200,
+  dropdownContainer: {
+    borderColor: '#E5E7EB',
   },
-  productTitle: { fontSize: 28, fontWeight: '800', color: '#FFFFFF' },
-  productDesc: { fontSize: 14, color: '#E0F2FE', marginVertical: 10 },
-  buttonRow: { flexDirection: 'row', marginTop: 12 },
+  productCard: {
+    marginTop: 10,
+    padding: 16,
+    borderRadius: 12,
+    height: 170,
+    // width: '100%',
+    // alignSelf: 'stretch',
+  },
+  productTitle: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: '#fff',
+  },
+  productDesc: {
+    marginTop: 6,
+    fontSize: 14,
+    color: '#E5E7EB',
+  },
+  buttonRow: {
+    flexDirection: 'row',
+    marginTop: 14,
+  },
   outlineBtn: {
-    backgroundColor: '#FFFFFF',
-    paddingVertical: 10,
-    paddingHorizontal: 14,
-    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#fff',
+    borderRadius: 8,
+    paddingVertical: 8,
+    paddingHorizontal: 12,
     marginRight: 10,
   },
-  outlineText: { fontSize: 13, fontWeight: '600', color: '#1E40AF' },
+  outlineText: {
+    color: '#fff',
+    fontSize: 13,
+    fontWeight: '600',
+  },
 });

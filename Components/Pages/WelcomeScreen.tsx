@@ -11,13 +11,9 @@ import React from 'react';
 import Header from '../Assests/Common/Header';
 import Colours from '../Assests/Common/Colors';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../navigation/types';
 
 const { width } = Dimensions.get('window');
-
-export type RootStackParamList = {
-  HomeScreen: undefined;
-  LoginScreen: undefined;
-};
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 

@@ -1,112 +1,46 @@
+import { StyleSheet, View } from 'react-native';
 import React from 'react';
-import {
-  View,
-  Text,
-  FlatList,
-  StyleSheet,
-  TouchableOpacity,
-} from 'react-native';
-import lubricantData from '../Assests/Jsons/lubricantData.json';
+import Header from '../Assests/Common/Header';
 import InputSearch from '../Assests/Common/InputSearch';
+import ListMenu2 from '../Assests/Common/ListMenu2';
+import wholeData from '../Assests/Jsons/wholeData.json';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../navigation/types';
 
-const VariantCard = ({ variant }: any) => {
+type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
+
+const LubricantsScreen = () => {
+  const navigation = useNavigation<NavigationProp>();
+
+  const navigate = (itemName: string) => {
+    switch (itemName) {
+      default:
+        navigation.navigate('InfoScreen', { name: itemName });
+        break;
+    }
+  };
+
   return (
-    <View style={styles.card}>
-      <Text style={styles.type}>{variant.type}</Text>
-      <Text style={styles.detail}>Brand: {variant.brand}</Text>
-      <Text style={styles.detail}>Usage: {variant.usage}</Text>
-      {variant.pack_sizes_l && (
-        <Text style={styles.detail}>
-          Pack Sizes (L): {variant.pack_sizes_l.join(', ')}
-        </Text>
-      )}
-      {variant.viscosity_grade && (
-        <View style={styles.row}>
-          <Text style={styles.detail}>Viscosity Grade:</Text>
-          <TouchableOpacity style={styles.detailsBtn}>
-            <Text>{variant.viscosity_grade}</Text>
-          </TouchableOpacity>
-        </View>
-      )}
-      {variant.api_spec && (
-        <Text style={styles.detail}>API Spec: {variant.api_spec}</Text>
-      )}
-      {variant.iso_grade && (
-        <Text style={styles.detail}>ISO Grade: {variant.iso_grade}</Text>
-      )}
-      {variant.flash_point_c && (
-        <Text style={styles.detail}>
-          Flash Point: {variant.flash_point_c}°C
-        </Text>
-      )}
-      {variant.notes && (
-        <Text style={styles.notes}>Notes: {variant.notes}</Text>
-      )}
+    <View style={styles.container}>
+      <Header caption={'Lubricants'} />
+      <InputSearch />
+      <View>
+        <ListMenu2
+          items={wholeData.Lubricants}
+          navigate={navigate}
+          itemHeight={170}
+          png={true}
+        />
+      </View>
     </View>
   );
 };
 
-export default function LubricantsScreen() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.company}>{lubricantData.company}</Text>
-      <InputSearch />
-      <FlatList
-        data={lubricantData.variants}
-        keyExtractor={(item, index) => index.toString()}
-        renderItem={({ item }) => <VariantCard variant={item} />}
-        contentContainerStyle={styles.list}
-      />
-    </View>
-  );
-}
+export default LubricantsScreen;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#f0f2f5',
-  },
-  company: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    padding: 16,
-  },
-  list: {
-    paddingHorizontal: 16,
-  },
-  card: {
-    backgroundColor: '#fff',
-    borderRadius: 8,
-    padding: 12,
-    marginBottom: 12,
-    shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowOffset: { width: 0, height: 2 },
-    shadowRadius: 4,
-    elevation: 3,
-  },
-  type: {
-    fontSize: 18,
-    fontWeight: '600',
-  },
-  detail: {
-    fontSize: 14,
-  },
-  detailsBtn: {
-    backgroundColor: '#e0f7aa',
-    padding: 4,
-    borderRadius: 4,
-  },
-  notes: {
-    marginTop: 6,
-    fontSize: 12,
-    fontStyle: 'italic',
-    color: '#555',
-  },
-  row: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    height: '100%',
   },
 });

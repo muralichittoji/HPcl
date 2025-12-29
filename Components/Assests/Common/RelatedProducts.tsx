@@ -15,7 +15,7 @@ const RelatedProducts = ({ Packages }: any) => {
       <View style={styles.dividerGreen} />
       <View style={styles.mapContainer}>
         {Packages?.map((item: any, index: number) => (
-          <Text style={styles.appText}>
+          <Text style={styles.appText} key={`${item}-${index}`}>
             {item}
             {index < Packages.length - 1 ? ',' : ''}
           </Text>

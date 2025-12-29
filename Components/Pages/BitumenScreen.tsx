@@ -7,16 +7,13 @@ import Header from '../Assests/Common/Header';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import InputSearch from '../Assests/Common/InputSearch';
-const VG30 = '../Assests/Images/icons/bitumens.png';
+import { RootStackParamList } from '../navigation/types';
+const VG30 = '../Assests/Images/icons/cylinder.png';
 const VG40 = '../Assests/Images/icons/VG-40.png';
-
-export type RootStackParamList = {
-  InfoScreen: { name: string };
-};
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
-const IndustrialHome = () => {
+const BitumenScreen = () => {
   const navigation = useNavigation<NavigationProp>();
 
   const getIcons = (itemName: String) => {
@@ -35,16 +32,17 @@ const IndustrialHome = () => {
   // Navigation
   const navigate = (itemName: string) => {
     switch (itemName) {
-      case 'VG-10':
-        navigation.navigate('InfoScreen', { name: itemName });
-        break;
-      case 'VG-30':
-        navigation.navigate('InfoScreen', { name: itemName });
-        break;
-      case 'VG-40':
-        navigation.navigate('InfoScreen', { name: itemName });
-        break;
+      // case 'VG-10':
+      //   navigation.navigate('InfoScreen', { name: itemName });
+      //   break;
+      // case 'VG-30':
+      //   navigation.navigate('InfoScreen', { name: itemName });
+      //   break;
+      // case 'VG-40':
+      //   navigation.navigate('InfoScreen', { name: itemName });
+      //   break;
       default:
+        navigation.navigate('InfoScreen', { name: itemName });
         break;
     }
   };
@@ -64,7 +62,7 @@ const IndustrialHome = () => {
   );
 };
 
-export default IndustrialHome;
+export default BitumenScreen;
 
 const styles = StyleSheet.create({
   container: {

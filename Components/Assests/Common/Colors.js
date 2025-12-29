@@ -20,6 +20,7 @@ const Colours = {
   purple: '#6256c8',
   black: '#000000',
   gray: '#E2E8F0',
+  white: '#FFF',
 };
 
 export default Colours;

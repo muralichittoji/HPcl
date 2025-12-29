@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import {
   View,
   Text,
@@ -8,83 +8,106 @@ import {
   ScrollView,
   Image,
 } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
-const HappinessIcon = '../Images/icons/DeliveringHappiness.png';
+import DropDownPicker from 'react-native-dropdown-picker';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 import wholeData from '../Jsons/wholeData.json';
 import productDetails from '../Jsons/InfoData.json';
 import Colours from './Colors';
-import { SafeAreaView } from 'react-native-safe-area-context';
+
+const HappinessIcon = '../Images/icons/DeliveringHappiness.png';
+
+type ProductValue = string;
 
 const ProductComparison = () => {
-  const [product1, setProduct1] = useState('');
-  const [product2, setProduct2] = useState('');
-  const [product3, setProduct3] = useState('');
+  /* -------------------- STATE -------------------- */
+
+  const [product1, setProduct1] = useState<ProductValue>('');
+  const [product2, setProduct2] = useState<ProductValue>('');
+  const [product3, setProduct3] = useState<ProductValue>('');
+
+  const [open1, setOpen1] = useState(false);
+  const [open2, setOpen2] = useState(false);
+  const [open3, setOpen3] = useState(false);
+
   const [showComparison, setShowComparison] = useState(false);
 
   /* -------------------- HELPERS -------------------- */
 
-  const selectedProducts = [product1, product2, product3].filter(Boolean);
+  // const selectedProducts = useMemo(
+  //   () => [product1, product2, product3].filter(Boolean),
+  //   [product1, product2, product3],
+  // );
+
+  const selectedProducts = useMemo(
+    () => [product1, product2, product3].filter(Boolean),
+    [product1, product2, product3],
+  );
 
   const canCompare = selectedProducts.length >= 2;
+  const getItems = useCallback(
+    (current: string) =>
+      wholeData.products.filter(
+        p => p.value === current || !selectedProducts.includes(p.value),
+      ),
+    [selectedProducts],
+  );
 
-  const getAvailableProducts = (currentValue: string) => {
-    return wholeData.products.filter(
-      p => p.value === currentValue || !selectedProducts.includes(p.value),
-    );
-  };
+  const items1 = useMemo(() => getItems(product1), [product1, getItems]);
+
+  const items2 = useMemo(() => getItems(product2), [product2, getItems]);
+
+  const items3 = useMemo(() => getItems(product3), [product3, getItems]);
 
   /* -------------------- UI -------------------- */
 
   return (
     <View style={styles.container}>
-      {/* Icon */}
       <Text style={styles.icon}>⚖️</Text>
-
-      {/* Title */}
       <Text style={styles.title}>Product Comparison</Text>
       <Text style={styles.subtitle}>Select at least 2 products to compare</Text>
 
-      {/* Picker 1 */}
-      <View style={styles.dropdown}>
-        <Picker
-          selectedValue={product1}
-          onValueChange={setProduct1}
-          style={styles.picker}
-        >
-          <Picker.Item label="Select product" value="" />
-          {getAvailableProducts(product1).map(p => (
-            <Picker.Item key={p.value} label={p.label} value={p.value} />
-          ))}
-        </Picker>
-      </View>
+      {/* Dropdown 1 */}
+      <DropDownPicker
+        open={open1}
+        value={product1}
+        items={items1}
+        setOpen={setOpen1}
+        setValue={setProduct1}
+        placeholder="Select product"
+        listMode="SCROLLVIEW"
+        style={styles.dropdown}
+        zIndex={3000}
+        zIndexInverse={1000}
+      />
 
-      {/* Picker 2 */}
-      <View style={styles.dropdown}>
-        <Picker
-          selectedValue={product2}
-          onValueChange={setProduct2}
-          style={styles.picker}
-        >
-          <Picker.Item label="Select product" value="" />
-          {getAvailableProducts(product2).map(p => (
-            <Picker.Item key={p.value} label={p.label} value={p.value} />
-          ))}
-        </Picker>
-      </View>
+      {/* Dropdown 2 */}
+      <DropDownPicker
+        open={open2}
+        value={product2}
+        items={items2}
+        setOpen={setOpen2}
+        setValue={setProduct2}
+        placeholder="Select product"
+        listMode="SCROLLVIEW"
+        style={styles.dropdown}
+        zIndex={2000}
+        zIndexInverse={2000}
+      />
 
-      {/* Picker 3 */}
-      <View style={styles.dropdown}>
-        <Picker
-          selectedValue={product3}
-          onValueChange={setProduct3}
-          style={styles.picker}
-        >
-          <Picker.Item label="Select product" value="" />
-          {getAvailableProducts(product3).map(p => (
-            <Picker.Item key={p.value} label={p.label} value={p.value} />
-          ))}
-        </Picker>
-      </View>
+      {/* Dropdown 3 */}
+      <DropDownPicker
+        open={open3}
+        value={product3}
+        items={items3}
+        setOpen={setOpen3}
+        setValue={setProduct3}
+        placeholder="Select product"
+        listMode="SCROLLVIEW"
+        style={styles.dropdown}
+        zIndex={1000}
+        zIndexInverse={3000}
+      />
 
       {/* Compare Button */}
       <TouchableOpacity
@@ -95,11 +118,15 @@ const ProductComparison = () => {
         <Text style={styles.buttonText}>COMPARE</Text>
       </TouchableOpacity>
 
-      {/* -------------------- COMPARISON MODAL -------------------- */}
-      <SafeAreaView>
-        <Modal transparent animationType="slide" visible={showComparison}>
+      {/* -------------------- MODAL -------------------- */}
+      <Modal
+        transparent
+        animationType="slide"
+        visible={showComparison}
+        onRequestClose={() => setShowComparison(false)}
+      >
+        <SafeAreaView style={styles.safeArea}>
           <View style={styles.overlay}>
-            {/* Header */}
             <View style={styles.modalHeader}>
               <Text style={styles.modalTitle}>Comparison</Text>
               <TouchableOpacity onPress={() => setShowComparison(false)}>
@@ -107,13 +134,8 @@ const ProductComparison = () => {
               </TouchableOpacity>
             </View>
 
-            {/* Floating Cards */}
-            <ScrollView
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              contentContainerStyle={styles.cardContainer}
-            >
-              {selectedProducts.map((key: string) => {
+            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+              {selectedProducts.map(key => {
                 const product =
                   productDetails[key as keyof typeof productDetails];
 
@@ -121,34 +143,36 @@ const ProductComparison = () => {
 
                 return (
                   <View key={key} style={styles.card}>
-                    <View>
-                      <Text style={styles.cardTitle}>{product.title}</Text>
-                      <Text style={styles.cardSubTitle}>
-                        {product.subTitle}
-                      </Text>
-                      <View style={styles.divider} />
-                      <Text style={styles.section}>Description</Text>
-                      <Text style={styles.text}>{product.description}</Text>
+                    <Text style={styles.cardTitle}>{product.title}</Text>
+                    <Text style={styles.cardSubTitle}>{product.subTitle}</Text>
+                    <View style={styles.divider} />
+                    <Text style={styles.section}>Description</Text>
+                    <Text style={styles.text}>{product.description}</Text>
 
-                      <Text style={styles.section}>Specifications</Text>
-                      <View style={styles.divider} />
-                      {product.specifications.map(
-                        (spec: any, index: number) => (
-                          <View key={index} style={styles.specRow}>
-                            <Text style={styles.specKey}>{spec.property}:</Text>
-                            <Text style={styles.specValue}>{spec.value}</Text>
-                          </View>
-                        ),
-                      )}
+                    <Text style={styles.section}>Specifications</Text>
+                    <View style={styles.divider} />
+                    {product.specifications
+                      .slice(0, 4)
+                      .map((spec: any, index: number) => (
+                        <View
+                          key={`${spec.property}-${index}`}
+                          style={styles.specRow}
+                        >
+                          <Text style={styles.specKey}>{spec.property}:</Text>
+                          <Text style={styles.specValue}>{spec.value}</Text>
+                        </View>
+                      ))}
 
-                      <Text style={styles.section}>Applications</Text>
-                      <Text style={styles.text}>{product.appData}</Text>
+                    <Text style={styles.section}>Applications</Text>
+                    <View style={styles.divider} />
+                    <Text style={styles.text}>{product.appData}</Text>
 
-                      <Text style={styles.section}>Packaging</Text>
-                      <Text style={styles.text}>
-                        {product.packaging.join(', ')}
-                      </Text>
-                    </View>
+                    <Text style={styles.section}>Packaging</Text>
+                    <View style={styles.divider} />
+                    <Text style={styles.text}>
+                      {product.packaging.join(', ')}
+                    </Text>
+
                     <Image
                       source={require(HappinessIcon)}
                       style={styles.happiness}
@@ -158,8 +182,8 @@ const ProductComparison = () => {
               })}
             </ScrollView>
           </View>
-        </Modal>
-      </SafeAreaView>
+        </SafeAreaView>
+      </Modal>
     </View>
   );
 };
@@ -168,14 +192,18 @@ export default ProductComparison;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     padding: 16,
+    flex: 1,
     backgroundColor: '#f5f6fa',
+  },
+  safeArea: {
+    height: '100%',
+    // marginTop: 30,
   },
   picker: { color: Colours.black },
   divider: {
     height: 1,
-    backgroundColor: Colours.gray,
+    backgroundColor: Colours.blueLight,
   },
   icon: {
     fontSize: 40,
@@ -213,6 +241,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   overlay: {
+    // maxHeight: '100%',
+    // overflow: 'hidden',
+    // height: '100%',
     flex: 1,
     backgroundColor: 'rgba(0,0,0,0.4)',
   },
@@ -241,6 +272,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     padding: 16,
     marginRight: 16,
+    marginVertical: 10,
     elevation: 6,
     display: 'flex',
     justifyContent: 'space-between',
@@ -258,6 +290,7 @@ const styles = StyleSheet.create({
   section: {
     marginTop: 12,
     fontWeight: 'bold',
+    color: Colours.blueDeep,
   },
   text: {
     fontSize: 12,
@@ -270,7 +303,7 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
   specKey: {
-    fontSize: 12,
+    fontSize: 11,
     fontWeight: '700',
   },
   specValue: {

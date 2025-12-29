@@ -5,7 +5,7 @@ export type RootStackParamList = {
   BulkFuelsHome: undefined;
   FuelsHome: undefined;
   IndustialLiquids: undefined;
-  IndustrialHome: undefined;
+  BitumenScreen: undefined;
   IndustrialScreen: undefined;
   InfoScreen: { name: string };
   LpgScreen: undefined;

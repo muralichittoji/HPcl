@@ -83,7 +83,7 @@ const ListMenu = ({ items, navigate, getIcons, itemHeight, png }: Listitem) => {
             style={[
               styles.text,
               {
-                textAlign: png ? 'center' : 'justify',
+                textAlign: png ? 'center' : 'left',
                 width: png ? '100%' : '75%',
               },
             ]}

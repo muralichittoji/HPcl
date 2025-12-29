@@ -1,8 +1,20 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  Modal,
+  ScrollView,
+} from 'react-native';
 import Colours from './Colors';
 
 const SpecificationsCard = ({ data }: any) => {
+  const [modalVisible, setModalVisible] = useState(false);
+
+  // Show only the first 4 items
+  const previewData = data.slice(0, 4);
+
   return (
     <View style={styles.container}>
       {/* Header */}
@@ -22,13 +34,58 @@ const SpecificationsCard = ({ data }: any) => {
         </View>
 
         {/* Table Rows */}
-        {data.map((item: any, index: number) => (
+        {previewData.map((item: any, index: number) => (
           <View key={index} style={styles.row}>
             <Text style={styles.cell}>{item.property}</Text>
             <Text style={styles.cellValue}>{item.value}</Text>
           </View>
         ))}
       </View>
+
+      {/* View More Button */}
+      {data.length > 4 && (
+        <TouchableOpacity
+          onPress={() => setModalVisible(true)}
+          style={styles.viewMoreButton}
+        >
+          <Text style={styles.viewMoreText}>View More...</Text>
+        </TouchableOpacity>
+      )}
+
+      {/* Modal */}
+      <Modal
+        visible={modalVisible}
+        animationType="slide"
+        transparent={true}
+        onRequestClose={() => setModalVisible(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={styles.modalContent}>
+            <ScrollView>
+              {/* Table Header */}
+              <View style={[styles.row, styles.headerRow]}>
+                <Text style={[styles.cell, styles.headerCell]}>Property</Text>
+                <Text style={[styles.cell, styles.headerCell]}>Value</Text>
+              </View>
+
+              {/* Table Rows */}
+              {data.map((item: any, index: number) => (
+                <View key={index} style={styles.row}>
+                  <Text style={styles.cell}>{item.property}</Text>
+                  <Text style={styles.cellValue}>{item.value}</Text>
+                </View>
+              ))}
+
+              <TouchableOpacity
+                onPress={() => setModalVisible(false)}
+                style={[styles.closeButton]}
+              >
+                <Text style={styles.viewMoreText}>Close</Text>
+              </TouchableOpacity>
+            </ScrollView>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 };
@@ -58,7 +115,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#E0F2FE',
     justifyContent: 'center',
     alignItems: 'center',
-    // marginRight: 10,
   },
 
   icon: {
@@ -110,5 +166,42 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '600',
     color: '#0F172A',
+  },
+
+  /* View More Button */
+  viewMoreButton: {
+    marginTop: 8,
+    padding: 8,
+    // backgroundColor: '#E0F2FE',
+    borderRadius: 8,
+    alignSelf: 'flex-start',
+  },
+  closeButton: {
+    padding: 10,
+    backgroundColor: '#E0F2FE',
+    marginTop: 10,
+    borderRadius: 8,
+    alignSelf: 'center',
+  },
+
+  viewMoreText: {
+    color: '#0369A1',
+    fontWeight: '600',
+    fontSize: 16,
+  },
+
+  /* Modal */
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.4)',
+    justifyContent: 'center',
+    padding: 16,
+  },
+
+  modalContent: {
+    backgroundColor: '#fff',
+    borderRadius: 16,
+    padding: 16,
+    maxHeight: '80%',
   },
 });

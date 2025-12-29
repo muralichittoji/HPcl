@@ -17,6 +17,10 @@ export const PACKAGE_MAP: Record<string, { icon: any; color: string }> = {
     icon: require('../Images/icons/bulk_tanker.png'),
     color: Colours.greenBright,
   },
+  Cylinders: {
+    icon: require('../Images/icons/cylinder.png'),
+    color: Colours.orangeLight,
+  },
   Rail: {
     icon: require('../Images/icons/rail.png'),
     color: Colours.pink,

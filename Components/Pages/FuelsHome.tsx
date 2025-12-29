@@ -9,11 +9,8 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 // import ListMenu2 from '../Assests/Common/ListMenu2';
 // import ListMenu from '../Assests/Common/ListMenu';
 import ListMenu2 from '../Assests/Common/ListMenu2';
+import { RootStackParamList } from '../navigation/types';
 // const fuelIcon = '../Assests/Images/icons/fuel_pump.png';
-
-export type RootStackParamList = {
-  InfoScreen: { name: string };
-};
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 

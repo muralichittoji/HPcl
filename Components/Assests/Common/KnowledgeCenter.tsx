@@ -13,14 +13,11 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import wholeData from '../Jsons/wholeData.json';
 import Header from '../Common/Header';
+import { RootStackParamList } from '../../navigation/types';
 const BitumenIcon = '../Images/icons/road-construction.png';
 const FireIcon = '../Images/icons/fire-solid.png';
 const ShieldIcon = '../Images/icons/shield-solid.png';
 const WaterIcon = '../Images/icons/Waterproofing.png';
-
-export type RootStackParamList = {
-  InfoScreen: undefined;
-};
 
 const { width } = Dimensions.get('window');
 const getColumns = () => {
@@ -42,7 +39,7 @@ const KnowledgeCenter = () => {
   const navigate = (itemName: String) => {
     switch (itemName) {
       case 'Bitumen & roads':
-        navigation.navigate('InfoScreen');
+        navigation.navigate('InfoScreen', { name: 'VG-10' });
         break;
       default:
         break;

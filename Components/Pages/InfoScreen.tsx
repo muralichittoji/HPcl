@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import Header from '../Assests/Common/Header';
 import infoData from '../Assests/Jsons/InfoData.json';
@@ -10,15 +10,8 @@ import DocumentsDownloads from '../Assests/Common/DocumentsDownloads';
 import ProductComparison from '../Assests/Common/ProductComparison';
 import RelatedProducts from '../Assests/Common/RelatedProducts';
 import EnquiryShare from '../Assests/Common/EnquiryShare';
-import { RouteProp } from '@react-navigation/native';
-// const relatedIcon = '../Assests/Images/icons/Related_Products.png';
-
-export type RootStackParamList = {
-  // Define screens and their params
-  Home: undefined; // This screen has no parameters
-  InfoScreen: { name: string }; // InfoScreen expects a "name" parameter
-  // Add other screens as needed
-};
+import { RouteProp, useIsFocused } from '@react-navigation/native';
+import { RootStackParamList } from '../navigation/types';
 
 type InfoScreenRouteProp = RouteProp<RootStackParamList, 'InfoScreen'>;
 
@@ -29,8 +22,15 @@ type InfoScreenProps = {
 const InfoScreen = ({ route }: InfoScreenProps) => {
   const { name } = route.params;
   const data = infoData[name as keyof typeof infoData];
-  console.log(name, 'name');
-  console.log(data, 'data');
+
+  const scrollRef = useRef<ScrollView>(null);
+  const isFocused = useIsFocused();
+
+  useEffect(() => {
+    if (isFocused && scrollRef.current) {
+      scrollRef.current.scrollTo({ y: 0, animated: false });
+    }
+  }, [isFocused]);
 
   if (!data) {
     return (
@@ -49,6 +49,7 @@ const InfoScreen = ({ route }: InfoScreenProps) => {
           paddingBottom: 30,
         }}
         showsVerticalScrollIndicator={false}
+        ref={scrollRef}
       >
         <View style={{ paddingHorizontal: 20 }}>
           {/* Divider */}
@@ -71,7 +72,7 @@ const InfoScreen = ({ route }: InfoScreenProps) => {
             <DocumentsDownloads />
           </View>
           <View>
-            <RelatedProducts Packages={data.Related} />
+            <RelatedProducts Packages={data.related} />
           </View>
           <View>
             <ProductComparison />

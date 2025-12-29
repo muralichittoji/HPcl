@@ -1,33 +1,10 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
-import Colours from './Colors';
-// const DrumsIcon = '../Images/icons/Drums.png';
-// const TankerIcon = '../Images/icons/bulk_tanker.png';
-// const RailIcon = '../Images/icons/rail.png';
 const PackageIcon = '../Images/icons/Packaging.png';
 import { PACKAGE_MAP } from '../Config/packageMap';
+import Colours from './Colors';
 
 const PackagingSupply = ({ data }: any) => {
-  //   const Packages = [
-  //     {
-  //       id: 1,
-  //       title: 'Drums',
-  //       icon: require(DrumsIcon),
-  //       colors: Colours.blueBright,
-  //     },
-  //     {
-  //       id: 2,
-  //       title: 'Bulk Tanker',
-  //       icon: require(TankerIcon),
-  //       colors: Colours.greenBright,
-  //     },
-  //     {
-  //       id: 3,
-  //       title: 'Rail',
-  //       icon: require(RailIcon),
-  //       colors: Colours.pink,
-  //     },
-  //   ];
   return (
     <View>
       {/* Header */}
@@ -48,13 +25,13 @@ const PackagingSupply = ({ data }: any) => {
 
       <View style={styles.dividerGreen} />
       <View style={styles.mapContainer}>
-        {data.map((item: any) => {
+        {data.map((item: any, index: number) => {
           if (item === '-')
             return <Text style={{ fontSize: 16, fontWeight: '700' }}>-</Text>;
           const config = PACKAGE_MAP[item];
           return (
             <TouchableOpacity
-              key={item.id}
+              key={`${item}-${index}`}
               style={[styles.appBtn, { backgroundColor: config.color }]}
             >
               <Image source={config.icon} style={[styles.icon]} />

@@ -14,25 +14,14 @@ import Colours from '../Assests/Common/Colors';
 import ListMenu from '../Assests/Common/ListMenu';
 import Header from '../Assests/Common/Header';
 const fuelIcon = '../Assests/Images/icons/fuel_icon.png';
-const gasIcon = '../Assests/Images/icons/bitumens.png';
+const gasIcon = '../Assests/Images/icons/cylinder.png';
 const oilIcon = '../Assests/Images/icons/oilcan-solid.png';
 const IndustialIcon = '../Assests/Images/icons/CRMB.png';
 // const LubricantsIcon = '../Assests/Images/icons/Drums.png';
 import wholeData from '../Assests/Jsons/wholeData.json';
+import { RootStackParamList } from '../navigation/types';
 
 const { width } = Dimensions.get('window');
-
-type RootStackParamList = {
-  FuelsHome: undefined;
-  LpgScreen: undefined;
-  LubricantsHome: undefined;
-  ContantScreen: undefined;
-  IndustrialScreen: undefined;
-  KnowledgeCenter: undefined;
-  ProductFinder: undefined;
-  InteractiveTools: undefined;
-  InfoScreen: { name: string };
-};
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
@@ -66,7 +55,7 @@ const HomeScreen = () => {
         navigation.navigate('FuelsHome');
         break;
       case 'LPG':
-        navigation.navigate('InfoScreen', { name: 'LPG' });
+        navigation.navigate('LpgScreen');
         break;
       case 'Industrial Fuels':
         navigation.navigate('IndustrialScreen');
@@ -79,6 +68,9 @@ const HomeScreen = () => {
         break;
       case 'Explore More':
         navigation.navigate('InteractiveTools');
+        break;
+      case 'Lubricants':
+        navigation.navigate('LubricantsScreen');
         break;
       default:
         break;
